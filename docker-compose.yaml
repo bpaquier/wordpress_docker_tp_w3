@@ -16,9 +16,9 @@ services:
         environment:
             MYSQL_DATABASE: marmischlag
             MYSQL_ROOT_PASSWORD: admin
-#        volumes:
-#            # Pour lancer un dump automatiquement au montage du conteneur
-#            - ./database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
+        volumes:
+            # Pour lancer un dump automatiquement au montage du conteneur
+           - ./database/dump.sql:/docker-entrypoint-initdb.d/dump.sql
 
 
     phpmyadmin:
