@@ -19,6 +19,25 @@ function register_recipes_post_type() {
     ]);
 }
 
+function register_theme_taxonomy() {
+    $labels = [
+        'name' => 'Apéritifs',
+        'singular_name' => 'Apéritif',
+        'search_items' => 'Rechercher un apéritif',
+        'all_items' => 'Tous les apéritifs'
+    ];
+
+    $args = [
+        'labels' => $labels,
+        'public' => true,
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true
+    ];
+
+    register_taxonomy('apéritif', ['recipes'], $args);
+};
+
 
 add_action( 'init', 'register_recipes_post_type' );
 
