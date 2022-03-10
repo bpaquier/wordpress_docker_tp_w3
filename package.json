@@ -1,0 +1,24 @@
+{
+  "name": "wordpress_docker_tp_w3",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "style": "node-sass wordpress/wp-content/themes/schlagbouffe/style.scss -o wordpress/wp-content/themes/schlagbouffe/ -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bpaquier/wordpress_docker_tp_w3.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bpaquier/wordpress_docker_tp_w3/issues"
+  },
+  "homepage": "https://github.com/bpaquier/wordpress_docker_tp_w3#readme",
+  "dependencies": {
+    "node-sass": "^7.0.1"
+  }
+}
