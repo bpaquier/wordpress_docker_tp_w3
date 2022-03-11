@@ -1,0 +1,132 @@
+.recipe {
+  padding-top: 10rem;
+  width: 90vw;
+  margin: 0 auto;
+  &__header {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    gap: 5rem;
+    margin-bottom: 6rem;
+
+    &-title {
+      font-size: 4rem;
+      font-weight: bold;
+    }
+    &-rate {
+      display: flex;
+      gap: 0.8rem;
+    }
+  }
+
+  &__rate-star {
+    font-size: 3.6rem;
+    color: $color-gray-3;
+    &.active {
+      color: $color-tertiary;
+    }
+  }
+
+  &__content {
+    display: flex;
+    min-height: 34rem;
+    gap: 6rem;
+
+    &-image {
+      flex-grow: 1;
+      img {
+        border-radius: 1.6rem;
+        width: 100%;
+      }
+    }
+    &-infos {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 4rem;
+      border-bottom: 1px solid $color-gray-3;
+      &-row {
+        display: flex;
+        justify-content: space-between;
+      }
+      &-label {
+        font-size: 2rem;
+        color: $color-black;
+        font-weight: bold;
+      }
+      &-value {
+        font-size: 2.5rem;
+        font-weight: bold;
+        color: $color-primary;
+      }
+      &-help {
+        font-size: 2rem;
+        color: $color-black;
+      }
+
+      &-help-key-value {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        &.mt {
+          margin-top: 3.2rem;
+        }
+
+        span:first-child {
+          font-size: 2rem;
+          color: $color-black;
+        }
+        span:last-child {
+          font-size: 2rem;
+          color: $color-primary;
+        }
+      }
+    }
+  }
+
+  &__details {
+    margin-top: 4rem;
+    display: flex;
+    flex-direction: column;
+
+    &-header {
+      display: flex;
+      &-item {
+        font-size: 2rem;
+        color: $color-gray-3;
+        border-bottom: 2px solid $color-gray-3;
+        padding: 1.5rem 4rem;
+        &.active {
+          color: $color-primary;
+          border-bottom: 2px solid $color-primary;
+        }
+      }
+    }
+
+    &-content {
+      display: none;
+      &.active {
+        display: flex;
+      }
+
+      &-ingredients {
+        display: flex;
+      }
+      &-ingredient {
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        color: $color-gray-2;
+
+        border-radius: 1.6rem;
+        font-size: 2rem;
+      }
+    }
+  }
+}
