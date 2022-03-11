@@ -15,6 +15,16 @@
 <body>
 
 <header class="header-shlag">
-    
+    <?php
+        wp_nav_menu([
+            'theme_location' => 'header',
+            'menu_class' => "navigation",
+            'container' => false
+        ]);
+    ?>
+    <nav class="navigation">
+
+    </nav>
+
 </header>
   
