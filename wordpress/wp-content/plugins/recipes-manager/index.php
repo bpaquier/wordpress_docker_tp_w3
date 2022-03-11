@@ -93,7 +93,7 @@ add_action( 'init', function () {
         'show_in_rest' => true,
         'show_admin_column' => true
     ];
-    
+
     register_taxonomy('dessert', ['recipes'], $args_dessert);
 
 
