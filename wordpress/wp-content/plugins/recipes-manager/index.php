@@ -12,22 +12,94 @@ if(!defined('ABSPATH')){
 
 add_action( 'init', function () {
 
-        $labels = [
-            'name' => 'Apéritifs',
-            'singular_name' => 'Apéritif',
-            'search_items' => 'Rechercher un apéritif',
-            'all_items' => 'Tous les apéritifs'
-        ];
+    /**
+     * CATEGORIE : 'Apéritif'
+     */
 
-        $args = [
-            'labels' => $labels,
-            'public' => true,
-            'hierarchical' => true,
-            'show_in_rest' => true,
-            'show_admin_column' => true
-        ];
+    $labels_starter = [
+        'name' => 'Apéritifs',
+        'singular_name' => 'Apéritif',
+        'search_items' => 'Rechercher un apéritif',
+        'all_items' => 'Tous les apéritifs'
+    ];
 
-    register_taxonomy('apéritif', ['recipes'], $args);
+    $args_starter = [
+        'labels' => $labels_starter,
+        'public' => true,
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true
+    ];
+
+    register_taxonomy('apéritif', ['recipes'], $args_starter);
+
+    /**
+     * CATEGORIE : 'Entrée'
+     */
+
+    $labels_appetizer = [
+        'name' => 'Entrées',
+        'singular_name' => 'Entrée',
+        'search_items' => 'Rechercher une entrée',
+        'all_items' => 'Toutes les entrées'
+    ];
+
+    $args_appetizer = [
+        'labels' => $labels_appetizer,
+        'public' => true,
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true
+    ];
+
+    register_taxonomy('entrée', ['recipes'], $args_appetizer);
+
+    /**
+     * CATEGORIE : 'Plat'
+     */
+
+    $labels_dish = [
+        'name' => 'Plats',
+        'singular_name' => 'Plat',
+        'search_items' => 'Rechercher un plat',
+        'all_items' => 'Tous les plats'
+    ];
+
+    $args_dish = [
+        'labels' => $labels_dish,
+        'public' => true,
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true
+    ];
+
+    register_taxonomy('plat', ['recipes'], $args_dish);
+
+    /**
+     * CATEGORIE : 'Dessert'
+     */
+
+    $labels_dessert = [
+        'name' => 'Desserts',
+        'singular_name' => 'Dessert',
+        'search_items' => 'Rechercher un dessert',
+        'all_items' => 'Tous les desserts'
+    ];
+
+    $args_dessert = [
+        'labels' => $labels_dessert,
+        'public' => true,
+        'hierarchical' => true,
+        'show_in_rest' => true,
+        'show_admin_column' => true
+    ];
+    
+    register_taxonomy('dessert', ['recipes'], $args_dessert);
+
+
+    /**
+     * POST-TYPE : Recipes
+     */
 
     register_post_type('recipes', [
         'public' => true,
