@@ -1,0 +1,6 @@
+.main {
+  @include flex-center;
+  flex-direction: column;
+  margin: auto;
+  max-width: 2000px;
+}

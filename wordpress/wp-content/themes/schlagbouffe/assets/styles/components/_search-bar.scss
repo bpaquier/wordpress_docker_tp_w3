@@ -1,0 +1,15 @@
+.search-bar {
+  padding: 3rem 0;
+  width: 100%;
+  &__input {
+    outline: none;
+    width: 100%;
+    border: none;
+    border: 1px solid $color-gray-1;
+    font-family: "Red Hat Display", sans-serif;
+    font-size: 2rem;
+    color: $color-gray-1;
+    border-radius: 2.4rem;
+    padding: 2rem 3rem;
+  }
+}

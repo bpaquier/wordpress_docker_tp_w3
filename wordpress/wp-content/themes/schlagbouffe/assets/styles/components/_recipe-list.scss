@@ -1,0 +1,27 @@
+.recipe-list {
+  width: 90vw;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+
+  &__title {
+    font-size: 3rem;
+    font-weight: bold;
+    color: $color-gray-1;
+    margin-bottom: 3rem;
+    margin-top: 12.4rem;
+  }
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    --item-gap: 1rem;
+    gap: var(--item-gap);
+  }
+  &__item {
+    width: calc(33% - var(--item-gap) - var(--item-gap));
+    margin-bottom: 4rem;
+  }
+}

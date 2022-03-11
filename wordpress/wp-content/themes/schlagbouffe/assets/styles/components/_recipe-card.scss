@@ -1,0 +1,37 @@
+.recipe-card {
+  @include flex-center;
+  height: 56rem;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  border: 1px solid $color-gray-3;
+  border-radius: 1.6rem;
+  &__title {
+    font-size: 2.5rem;
+    color: $color-black;
+    font-weight: bold;
+    text-align: center;
+    padding: 3rem 4rem;
+    position: absolute;
+    background-color: $color-white;
+    width: 100%;
+    top: 0;
+    z-index: 4;
+  }
+  &__image {
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 3;
+  }
+
+  &:hover {
+    .recipe-card__image {
+      transform: scale(1.1);
+    }
+  }
+}

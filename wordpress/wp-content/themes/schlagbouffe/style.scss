@@ -1,6 +1,5 @@
 @import "./assets/styles/vars";
-
-html,
-body {
-  background-color: $var;
-}
+@import "./assets/styles/mixins";
+@import "./assets/styles/reset";
+@import "./assets/styles/components/all";
+@import "./assets/styles/base";
