@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "style": "node-sass wordpress/wp-content/themes/schlagbouffe/style.scss -o wordpress/wp-content/themes/schlagbouffe/ -w"
+    "style": "node-sass wordpress/wp-content/themes/schlagbouffe/style.scss -o wordpress/wp-content/themes/schlagbouffe/ -w wordpress/wp-content/themes/schlagbouffe/assets/styles/*.scss  wordpress/wp-content/themes/schlagbouffe/assets/styles/components/*.scss"
   },
   "repository": {
     "type": "git",
