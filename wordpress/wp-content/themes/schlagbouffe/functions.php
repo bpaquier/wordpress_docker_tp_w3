@@ -6,40 +6,12 @@ add_action('after_setup_theme',
         add_theme_support('post-thumbnails');
 
         add_theme_support('menus');
+
+        //Hide admin bar for suscriber profile
+        if(current_user_can("suscriber") && !is_admin()) {
+            show_admin_bar(false);
+        }
     });
-
-function register_recipes_post_type() {
-    register_post_type('recipes', [
-        'public' => true,
-        'label'  => 'Recettes',
-        'hierarchical' => false,
-        'show_in_menu' => true,
-        'show_in_nav_menus' => true,
-        'supports' => [ 'author', 'excerpt', 'page-attributes', 'thumbnail', 'custom-fields', 'title']
-    ]);
-}
-
-function register_theme_taxonomy() {
-    $labels = [
-        'name' => 'Apéritifs',
-        'singular_name' => 'Apéritif',
-        'search_items' => 'Rechercher un apéritif',
-        'all_items' => 'Tous les apéritifs'
-    ];
-
-    $args = [
-        'labels' => $labels,
-        'public' => true,
-        'hierarchical' => true,
-        'show_in_rest' => true,
-        'show_admin_column' => true
-    ];
-
-    register_taxonomy('apéritif', ['recipes'], $args);
-};
-
-
-add_action( 'init', 'register_recipes_post_type' );
 
 /*
  * Set ACF
