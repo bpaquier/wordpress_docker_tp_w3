@@ -320,8 +320,34 @@ function cd($data, $label='', $return = false) {
 /**
  * Proper way to enqueue scripts and styles
  */
+function get_navigation_items($type) {
+  $mainNavItems = [];
+  $recipesNavItems = [];
+
+  if ( $menu_items = wp_get_nav_menu_items( 'main-menu' ) ) {
+
+    foreach ( $menu_items as $menu_item ) {
+      //$current = ( $menu_item->object_id == get_queried_object_id() ) ? 'active' : '';
+      if($menu_item->title === 'Recettes' || $menu_item->title === 'Actualités') {
+        $mainNavItems[] = $menu_item;
+      } else {
+        $recipesNavItems[] = $menu_item;
+      }
+    }
+
+    if($type === 'main') {
+      return $mainNavItems;
+    } else if ($type === 'recipes') {
+      return $recipesNavItems;
+    }
+  }
+}
+
+/**
+ * Proper way to enqueue scripts and styles
+ */
 function wpdocs_theme_name_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_script( 'script.js', get_template_directory_uri() . '/assets/js/script.js' );
+    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js' );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
