@@ -56,7 +56,4 @@
     <?php endif; ?>
 
 </header>
-
-<?php
-
   

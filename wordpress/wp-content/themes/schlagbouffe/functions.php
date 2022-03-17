@@ -13,6 +13,89 @@ add_action('after_setup_theme',
         }
     });
 
+/**
+ * Shortcodes
+ */
+
+add_shortcode('login_form', function () {
+    ob_start(); ?>
+    <form action='<?= home_url('wp-login.php') ?>' method='post'>
+        <div>
+            <label for="id">Identifiant</label>
+            <input id="id" type="text" name="log">
+        </div>
+        <input type="hidden" action="">
+        <div>
+            <label for="pass">Mot de passe</label>
+            <input type="password" id="pass" name="pwd">
+        </div>
+        <div>
+            <input type="submit" value="se connecter" name="wp-submit">
+        </div>
+    </form>
+    <?php return ob_get_clean();
+
+});
+
+add_shortcode('register_form', function() {
+    ob_start(); ?>
+    <form action="<?= admin_url('admin-post.php')?>" method="post">
+        <div>
+            <label for="name">Name</label>
+            <input id="name" type="text" name="name" required>
+        </div>
+        <div>
+            <label for="mail">E mail</label>
+            <input id="mail" type="mail" name="mail" required>
+        </div>
+        <div>
+            <label for="pass">Mot de passe</label>
+            <input type="password" id="pass" name="pwd" required>
+        </div>
+        <div>
+            <label for="role">Choisir un role</label>
+            <select id="role" name="role" required>
+                <option value="recipes_contributor">Contributor</option>
+                <option value="administrator">admin</option>
+                <option value="recipes_manager">Recipes Manager</option>
+            </select>
+        </div>
+        <input type="hidden" name="action" value="wp_user_register">
+        <input type="submit" value="Envoyer" >
+        <?php wp_nonce_field('register', 'register'); ?>
+    </form>
+    <?php return ob_get_clean();
+});
+
+
+
+
+/**
+ * handle register form
+ */
+add_action('admin_post_wp_user_register', function() {
+    if (!wp_verify_nonce($_POST['register'], 'register')) {
+        die('nonce invalide');
+    }
+
+    $name = $_POST['name'];
+    $mail = $_POST['mail'];
+    $pwd = $_POST['pwd'];
+    $role = $_POST['role'];
+
+    if(isset($name) and isset($mail) and isset($pwd) and isset($role)) {
+        wp_insert_user([
+            'user_pass' => $pwd,
+            'user_login' => $name,
+            "user_mail" => $mail,
+            "role" => $role
+        ]);
+        wp_redirect(home_url() . $_POST['_wp_http_referer'] . '?success=true');
+    } else {
+        wp_redirect(home_url() . $_POST['_wp_http_referer'] . '?success=false');
+    }
+});
+
 /*
  * Set ACF
  */
@@ -327,7 +410,6 @@ function get_navigation_items($type) {
   if ( $menu_items = wp_get_nav_menu_items( 'main-menu' ) ) {
 
     foreach ( $menu_items as $menu_item ) {
-      //$current = ( $menu_item->object_id == get_queried_object_id() ) ? 'active' : '';
       if($menu_item->title === 'Recettes' || $menu_item->title === 'Actualités') {
         $mainNavItems[] = $menu_item;
       } else {
@@ -348,6 +430,6 @@ function get_navigation_items($type) {
  */
 function wpdocs_theme_name_scripts() {
     wp_enqueue_style( 'style', get_stylesheet_uri() );
-    wp_enqueue_script( 'script', get_template_directory_uri() . '/assets/js/script.js' );
+    wp_enqueue_script( 'script.js', get_template_directory_uri() . '/assets/js/script.js', [], false, true );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
