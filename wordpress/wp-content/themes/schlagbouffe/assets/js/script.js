@@ -12,8 +12,6 @@ function toggleNavList() {
         e.preventDefault();
         $recipesNavList.classList.remove('header__recipesList--isOpen')
     })
-
-
 }
 
 window.onload = function() {

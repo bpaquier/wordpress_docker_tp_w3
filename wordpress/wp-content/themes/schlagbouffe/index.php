@@ -35,7 +35,18 @@ $dummy = [
 ?>
 
   <main class="main">
-    <?php get_template_part('template-parts/hero', 'hero'); ?>
+    <?php
+      get_template_part(
+        'template-parts/hero',
+        'hero',
+        array(
+          'type' => 'home',
+          'title' => 'Bienvenue !',
+          'text' => 'Toujours plus d’inspiration en cuisine grâce à nos recettes faciles, rapides et tendances.',
+          'image' => 'https://source.unsplash.com/random/2080x2900'
+        )
+      );
+    ?>
     <div class="recipe-list">
       <div class="recipe-list__header">
         <?php get_template_part('template-parts/search-bar', 'search-bar'); ?>

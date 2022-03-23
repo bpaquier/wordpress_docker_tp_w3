@@ -1,9 +1,25 @@
-<?php ?>
+<?php
+
+$minHeight = '';
+
+if($args['type'] === 'recipes') {
+	$minHeight = '38.7rem';
+} else {
+	$minHeight = '55.4rem';
+}
+
+?>
 <div class="hero">
-  <div class="hero__wrapper" style="background-image: url('https://source.unsplash.com/random/2080x2900');">
-  <div class="hero__overlay"></div>
+  <div class="hero__wrapper" style="background-image: url(<?= $args['image'] ?>); min-height: <?= $minHeight ?>">
+    <div class="hero__overlay"></div>
     <div class="hero__content">
-      <h1 class="hero__title">Bienvenue!</h1>
-      <p class="hero__text">Toujours plus d’inspiration en cuisine grâce à nos recettes faciles, rapides et tendances.</p>
+
+      <h1 class="hero__title"><?= $args['title'] ?></h1>
+
+      <?php if ($args['text'] !== '') : ?>
+        <p class="hero__text"><?= $args['text'] ?></p>
+      <?php endif; ?>
+
+    </div>
   </div>
 </div>

@@ -35,7 +35,7 @@
                 <li>Catégories</li>
 
                 <?php foreach ( $navRecipesItems as $recipe_item ) : ?>
-                    <li><a class="" href="<?= $recipe_item->url ?>"><?= $recipe_item->title ?></a></li>
+                    <li><a class="" href="<?= $recipe_item->url ?>"><?= $recipe_item->title ?> <?= $recipe_item->slug ?></a></li>
                 <?php endforeach; ?>
               </ul>
             </li>

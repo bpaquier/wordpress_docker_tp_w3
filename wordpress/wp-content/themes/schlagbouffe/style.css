@@ -131,12 +131,10 @@ table {
 
 .hero {
   width: 100vw;
-  height: 100vh;
   background-color: #ffffff;
   padding-top: 5rem; }
   .hero__wrapper {
     max-width: 128rem;
-    min-height: 55.4rem;
     margin: auto;
     width: 90vw;
     background-position: center;
@@ -170,7 +168,8 @@ table {
     width: 80%; }
   .hero__title {
     font-size: 4.5rem;
-    font-weight: bold; }
+    font-weight: bold;
+    white-space: nowrap; }
   .hero__text {
     font-size: 2.5rem; }
 
@@ -269,7 +268,7 @@ table {
       gap: 0.8rem; }
   .recipe__rate-star {
     font-size: 3.6rem;
-    color: #cccccc; }
+    color: #eaeaea; }
     .recipe__rate-star.active {
       color: #dfa191; }
   .recipe__content {
@@ -290,7 +289,7 @@ table {
       display: flex;
       flex-direction: column;
       padding-bottom: 4rem;
-      border-bottom: 1px solid #cccccc; }
+      border-bottom: 1px solid #eaeaea; }
       .recipe__content-info-row {
         display: flex;
         justify-content: space-between; }
@@ -325,8 +324,8 @@ table {
       display: flex; }
       .recipe__details-header-item {
         font-size: 2rem;
-        color: #cccccc;
-        border-bottom: 2px solid #cccccc;
+        color: #eaeaea;
+        border-bottom: 2px solid #eaeaea;
         padding: 1.5rem 4rem; }
         .recipe__details-header-item.active {
           color: #234a5d;
@@ -440,6 +439,27 @@ table {
     color: #234a5d; }
   .button:hover {
     cursor: pointer; }
+
+.tabBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8rem;
+  margin: 9rem 0; }
+  .tabBar__link {
+    display: block;
+    padding: 2rem 5rem;
+    border-radius: 1.6rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: #234a5d;
+    background-color: #eaeaea;
+    transition: all 0.3s linear; }
+    .tabBar__link:first-letter {
+      text-transform: capitalize; }
+    .tabBar__link:hover {
+      color: #ffffff;
+      background-color: #234a5d; }
 
 html,
 body {

@@ -1,0 +1,28 @@
+.tabBar {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 8rem;
+  margin: 9rem 0;
+
+  &__link {
+    display: block;
+    padding: 2rem 5rem;
+    border-radius: 1.6rem;
+    font-size: 2rem;
+    text-decoration: none;
+    color: $color-primary;
+    background-color: $color-gray-3;
+    transition: all 0.3s linear;
+
+    &:first-letter {
+      text-transform: capitalize;
+    }
+
+    &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+  }
+}
+
