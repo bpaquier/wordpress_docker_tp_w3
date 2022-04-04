@@ -1,3 +1,4 @@
 app/vendor
 .env
-node_modules 
+node_modules
+style.css
