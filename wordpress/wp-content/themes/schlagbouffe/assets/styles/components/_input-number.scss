@@ -1,0 +1,26 @@
+.input-number{
+  display: flex;
+  gap: .8rem;
+
+  &__button {
+    background-color: $color-gray-3;
+    width: 5rem;
+    height: 5rem;
+    color: $color-black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: .8rem;
+    font-size: 1.6rem;
+  }
+
+  &__result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-gray-3;
+    padding: 1.4rem 2.4rem;
+    font-size: 1.6rem;
+    border-radius: .8rem;
+  }
+}

@@ -63,25 +63,61 @@ $dummy = array(
         </div>
 
         <div class="recipe__details-content active" data-detail-content="ingredient">
-            <div class="recipe__details-content-ingredients">
-              <div class="recipe__details-content-ingredient">
+          <!-- INGREDIENT ITEMS -->
+            <div class="recipe__details-content-small-cards">
+              <div class="recipe__details-content-small-card">
                 <p>
                   <span>1</span>
                   <span>oignons</span>
                 </p>
-                <img src="https://source.unsplash.com/random/70x70" alt="">
+                <div class="recipe__details-content-small-card-img">
+                  <img src="https://source.unsplash.com/random/500x500" alt="">
+                </div>
               </div>
-              <div class="recipe__details-content-ingredient">
+              <div class="recipe__details-content-small-card">
                 <p>
-                  <span class="recipe__details-content-ingredient-quantity">1</span>
-                  <span class="recipe__details-content-ingredient-name">oignons</span>
+                  <span class="recipe__details-content-small-card-quantity">1</span>
+                  <span class="recipe__details-content-small-card-name">oignons</span>
                 </p>
-                <img src="https://source.unsplash.com/random/70x70" alt="">
+                <div class="recipe__details-content-small-card-img">
+                  <img src="https://source.unsplash.com/random/500x500" alt="">
+                </div>
               </div>
             </div>
         </div>
         <div class="recipe__details-content" data-detail-content="utensils">
-          Ustensils
+          <!-- USTENSILS ITEMS -->
+          <div class="recipe__details-content-small-cards">
+              <div class="recipe__details-content-small-card">
+                <p>
+                  <span>Louche</span>
+                </p>
+                <div class="recipe__details-content-small-card-img">
+                  <img src="https://source.unsplash.com/random/500x500" alt="">
+                </div>
+              </div>
+              <div class="recipe__details-content-small-card">
+                <p>
+                  <span class="recipe__details-content-small-card-name">Mixeur</span>
+                </p>
+                <div class="recipe__details-content-small-card-img">
+                  <img src="https://source.unsplash.com/random/500x500" alt="">
+                </div>
+              </div>
+              <div class="recipe__details-content-small-card">
+                <p class="recipe__details-content-small-card-texts">
+                  <span class="recipe__details-content-small-card-name">Blendeur chauffant</span>
+                </p>
+                <div class="recipe__details-content-small-card-img">
+                  <img src="https://source.unsplash.com/random/500x500" alt="">
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="input-number" data-input-number>
+          <div class="input-number__button" data-input-number-minus >-</div>
+          <div class="input-number__result"><span data-input-number-value >4</span>&nbsp;personnes</div>
+          <div class="input-number__button" data-input-number-plus >+</div>
         </div>
       </div>
     </div>

@@ -45,4 +45,35 @@ window.onload = function() {
             });
         });
     }
+
+
+    /* Input Number */
+    const $inputsNumber = document.querySelectorAll("[data-input-number]");
+    if ($inputsNumber.length > 0) { 
+        $inputsNumber.forEach(($input) => {
+            const $minus = $input.querySelector("[data-input-number-minus]");
+            const $plus = $input.querySelector("[data-input-number-plus]");
+            const $value = $input.querySelector("[data-input-number-value]");
+            function updateValue($value, type) {
+                const current = parseInt($value.innerHTML);
+                if (type === "minus") { 
+                    if (current > 1) {
+                        $value.innerHTML = current - 1;
+                    }
+                } else if (type === "plus") {
+                    $value.innerHTML = current + 1;
+                }
+            }
+            
+            $minus.addEventListener("click", (e) => {
+                e.preventDefault();
+                updateValue($value, "minus");
+            });
+
+            $plus.addEventListener("click", (e) => { 
+                e.preventDefault();
+                updateValue($value, "plus");
+            })
+        });
+    }
 }
