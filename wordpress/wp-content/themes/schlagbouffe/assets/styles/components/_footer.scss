@@ -1,0 +1,49 @@
+.footer {
+  height: 300px;
+  background-color: $color-black;
+  padding: 4rem;
+
+  &__links {
+    margin: auto;
+    width: 90vw;
+    max-width: 2000px;
+    display: flex;
+    align-items: flex-start;
+  }
+
+  &__navLinks {
+    display: flex;
+    width: 90vw;
+    height: 100%;
+
+    &--title{
+      margin-bottom: 2rem;
+      font-size: 15px;
+      font-weight: 700;
+      color: $color-white;
+    }
+
+    &--links:nth-last-child(1){
+      margin-left: 4rem;
+      height: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    &--link{
+      margin-top: 2rem;
+      font-size: 13px;
+
+      & > a {
+        text-decoration: none;
+        color: $color-white;
+      }
+    }
+  }
+
+  &__logo {
+    width: 200px;
+    height: 200px;
+    background-color: red;
+  }
+}
