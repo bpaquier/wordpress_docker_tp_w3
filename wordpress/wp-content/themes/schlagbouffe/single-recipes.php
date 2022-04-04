@@ -62,8 +62,8 @@ $dummy = array(
           <div class="recipe__details-header-item" data-detail="utensils">Ustensiles</div>
         </div>
 
+        <!-- INGREDIENT ITEMS -->
         <div class="recipe__details-content active" data-detail-content="ingredient">
-          <!-- INGREDIENT ITEMS -->
             <div class="recipe__details-content-small-cards">
               <div class="recipe__details-content-small-card">
                 <p>
@@ -85,8 +85,8 @@ $dummy = array(
               </div>
             </div>
         </div>
+        <!-- USTENSILS ITEMS -->
         <div class="recipe__details-content" data-detail-content="utensils">
-          <!-- USTENSILS ITEMS -->
           <div class="recipe__details-content-small-cards">
               <div class="recipe__details-content-small-card">
                 <p>
@@ -114,10 +114,36 @@ $dummy = array(
               </div>
             </div>
         </div>
-        <div class="input-number" data-input-number>
-          <div class="input-number__button" data-input-number-minus >-</div>
-          <div class="input-number__result"><span data-input-number-value >4</span>&nbsp;personnes</div>
-          <div class="input-number__button" data-input-number-plus >+</div>
+
+        <div class="recipe__details-input">
+          <div class="input-number" data-input-number>
+            <div class="input-number__button" data-input-number-minus >-</div>
+            <div class="input-number__result"><span data-input-number-value >4</span>&nbsp;personnes</div>
+            <div class="input-number__button" data-input-number-plus >+</div>
+          </div>
+        </div>
+
+        <div class="recipe__details-steps">
+          <div class="recipe__details-steps-group">
+            <h3 class="recipe__details-steps-group-title">Préparation</h3>
+            <div class="recipe__details-step">
+              <h4 class="recipe__details-step-title">Etape 1</h4>
+              <p class="recipe__details-step-content">Epluchez et lavez tous les légumes, épluchez et émincez l'oignon, coupez les légumes en rondelles.</p>
+            </div>
+            <div class="recipe__details-step">
+              <h4 class="recipe__details-step-title">Etape 1</h4>
+              <p class="recipe__details-step-content">Epluchez et lavez tous les légumes, épluchez et émincez l'oignon, coupez les légumes en rondelles.</p>
+            </div>
+            <div class="recipe__details-step">
+              <h4 class="recipe__details-step-title">Etape 1</h4>
+              <p class="recipe__details-step-content">Epluchez et lavez tous les légumes, épluchez et émincez l'oignon, coupez les légumes en rondelles.</p>
+            </div>
+            <div class="recipe__details-step">
+              <h4 class="recipe__details-step-title">Etape 1</h4>
+              <p class="recipe__details-step-content">Epluchez et lavez tous les légumes, épluchez et émincez l'oignon, coupez les légumes en rondelles.</p>
+            </div>
+          </div>
+          <div class="repice__details-steps-group"></div>
         </div>
       </div>
     </div>

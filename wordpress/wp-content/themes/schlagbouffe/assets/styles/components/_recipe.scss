@@ -160,5 +160,42 @@
       }
     }
 
+    &-input {
+      padding-top: 2rem;
+    }
+
+    &-steps{
+      margin-top: 4rem;
+    }
+    
+    &-steps-group{
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      &-title{
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-tertiary;
+      }
+    }
+
+    &-step{
+      display: flex;
+      flex-direction: column;
+      gap: 4rem;
+      
+      &-title{
+        font-size: 2rem;
+        font-weight: bold;
+        color: $color-black;
+      }
+
+      &-content{
+        font-size: 1.6rem;
+        color: $color-black;
+      }
+
+    }
+
   }
 }
