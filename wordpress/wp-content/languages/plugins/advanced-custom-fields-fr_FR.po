@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Plugins - Advanced Custom Fields - Stable (latest release) package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2021-09-24 13:00:37+0000\n"
+"PO-Revision-Date: 2022-03-27 19:44:35+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -10,6 +10,64 @@ msgstr ""
 "X-Generator: GlotPress/3.0.0-alpha.2\n"
 "Language: fr\n"
 "Project-Id-Version: Plugins - Advanced Custom Fields - Stable (latest release)\n"
+
+#: acf.php:497
+msgid "Advanced Custom Fields and Advanced Custom Fields PRO should not be active at the same time. We've automatically deactivated Advanced Custom Fields PRO."
+msgstr "Advanced Custom Fields and Advanced Custom Fields PRO ne doivent pas être actifs en même temps. Nous avons automatiquement désactivé Advanced Custom Fields PRO."
+
+#: acf.php:495
+msgid "Advanced Custom Fields and Advanced Custom Fields PRO should not be active at the same time. We've automatically deactivated Advanced Custom Fields."
+msgstr "Advanced Custom Fields and Advanced Custom Fields PRO ne doivent pas être actifs en même temps. Nous avons automatiquement désactivé Advanced Custom Fields PRO."
+
+#: includes/acf-value-functions.php:362
+msgid "<strong>%1$s</strong> - We've detected one or more calls to retrieve ACF field values before ACF has been initialized. This is not supported and can result in malformed or missing data. <a href=\"%2$s\" target=\"_blank\">Learn how to fix this</a>."
+msgstr "<strong>%1$s</strong> - Nous avons détecté un ou plusieurs appels pour récupérer les valeurs des champs ACF avant l’initialisation d’ACF. Ceci n’est pas pris en charge et peut entraîner des données incorrectes ou manquantes. <a href=\"%2$s\" target=\"_blank\">Découvrez comment corriger ce problème</a>."
+
+#: includes/fields/class-acf-field-user.php:526
+msgid "%1$s must have a user with the %2$s role."
+msgid_plural "%1$s must have a user with one of the following roles: %2$s"
+msgstr[0] "%1$s doit avoir un utilisateur/utilisatrice avec le rôle %2$s."
+msgstr[1] "%1$s doit avoir un utilisateur/utilisatrice avec l’un des rôles suivants : %2$s"
+
+#: includes/fields/class-acf-field-user.php:517
+msgid "%1$s must have a valid user ID."
+msgstr "%1$s doit avoir un ID utilisateur/utilisatrice valide."
+
+#: includes/fields/class-acf-field-user.php:355
+msgid "Invalid request."
+msgstr "Demande invalide."
+
+#: includes/fields/class-acf-field-select.php:663
+msgid "%1$s is not one of %2$s"
+msgstr "%1$s n’est pas l’un des %2$s"
+
+#: includes/fields/class-acf-field-post_object.php:667
+msgid "%1$s must have term %2$s."
+msgid_plural "%1$s must have one of the following terms: %2$s"
+msgstr[0] "%1$s doit contenir le terme %2$s."
+msgstr[1] "%1$s doit contenir l’un des termes suivants : %2$s"
+
+#: includes/fields/class-acf-field-post_object.php:651
+msgid "%1$s must be of post type %2$s."
+msgid_plural "%1$s must be of one of the following post types: %2$s"
+msgstr[0] "%1$s doit être une publication de type %2$s."
+msgstr[1] "%1$s doit appartenir à l’un des types de publication suivants : %2$s"
+
+#: includes/fields/class-acf-field-post_object.php:642
+msgid "%1$s must have a valid post ID."
+msgstr "%1$s doit avoir un ID de publication valide."
+
+#: includes/fields/class-acf-field-file.php:469
+msgid "%s requires a valid attachment ID."
+msgstr "%s nécessite un ID de fichier jointe valide."
+
+#: includes/admin/views/field-group-options.php:27
+msgid "Show in REST API"
+msgstr "Afficher dans l’API REST"
+
+#: includes/fields/class-acf-field-color_picker.php:167
+msgid "Enable Transparency"
+msgstr "Activer la transparence"
 
 #: includes/fields/class-acf-field-color_picker.php:186
 msgid "RGBA Array"
@@ -718,6 +776,10 @@ msgstr "Mise à niveau de la base de données effectuée. <a href=\"%s\">Retourn
 msgid "Site is up to date"
 msgstr "Le site est à jour"
 
+#: includes/admin/views/html-admin-page-upgrade-network.php:78
+msgid "Site requires database upgrade from %1$s to %2$s"
+msgstr "Le site nécessite une mise à niveau de la base de données à partir de %1$s vers %2$s"
+
 #: includes/admin/views/html-admin-page-upgrade-network.php:36
 #: includes/admin/views/html-admin-page-upgrade-network.php:47
 msgid "Site"
@@ -896,6 +958,10 @@ msgstr "Veuillez sélectionner la destination pour ce champ"
 #: includes/admin/admin-field-group.php:758
 msgid "Close Window"
 msgstr "Fermer la fenêtre"
+
+#: includes/admin/admin-field-group.php:754
+msgid "The %1$s field can now be found in the %2$s field group"
+msgstr "Le champ %1$s peut maintenant être trouvé dans le groupe de champs %2$s"
 
 #: includes/admin/admin-field-group.php:752
 msgid "Move Complete."
@@ -2039,6 +2105,12 @@ msgstr "Apparaît à la création d'un nouvel article"
 #: includes/fields/class-acf-field-text.php:25
 msgid "Text"
 msgstr "Texte"
+
+#: includes/fields/class-acf-field-relationship.php:752
+msgid "%1$s requires at least %2$s selection"
+msgid_plural "%1$s requires at least %2$s selections"
+msgstr[0] "%1$s requiert au moins %2$s sélection"
+msgstr[1] "%1$s requiert au moins %2$s sélections"
 
 #: includes/fields/class-acf-field-post_object.php:424
 #: includes/fields/class-acf-field-relationship.php:668
