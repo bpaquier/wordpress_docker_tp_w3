@@ -254,20 +254,23 @@ function recipes_meta_box() {
 add_action('add_meta_boxes', 'recipes_meta_box');
 
 function save_difficulty($post_id) {
-    update_post_meta($post_id,'recipe_difficulty', $_POST['difficulty']);
-    if($_POST['price']) {
+    if(isset($_POST['difficulty'])) {
+        update_post_meta($post_id,'recipe_difficulty', $_POST['difficulty']);
+    }
+
+    if(isset($_POST['price'])) {
         update_post_meta($post_id, 'recipe_price', $_POST['price'] );
     } else {
         delete_post_meta($post_id, 'recipe_price');
     }
 
-    if($_POST['cooking_time']) {
+    if(isset($_POST['cooking_time'])) {
         update_post_meta($post_id, 'cooking_time', $_POST['cooking_time'] );
     } else {
         delete_post_meta($post_id, 'cooking_time');
     }
 
-    if($_POST['cooking_time']) {
+    if(isset($_POST['cooking_time'])) {
         update_post_meta($post_id, 'preparation_time', $_POST['preparation_time'] );
     } else {
         delete_post_meta($post_id, 'preparation_time');
@@ -350,6 +353,27 @@ function save_taxonomy_custom_meta_field( $term_id ) {
 add_action( 'edited_category', 'save_taxonomy_custom_meta_field', 10, 2 );
 add_action( 'create_category', 'save_taxonomy_custom_meta_field', 10, 2 );
 
+/**
+ * add post Form shortcode
+ */
+add_shortcode('new_post_form', function () {
+    ob_start(); ?>
+        <form action='<?= home_url('wp-login.php') ?>' method='post'>
+            <input type="hidden" action="">
+            <div>
+                <label for="title">Title</label>
+                <input id="title" type="text" name="title">
+            </div>
+            <div>
+                <label for="description">Description</label>
+                <textarea id="description" name="description"></textarea>
+            </div>
+            <div>
+                <input type="submit" value="Publier" name="wp-submit">
+            </div>
+        </form>
+    <?php return ob_get_clean();
+});
 
 /*
 register_uninstall_hook(__FILE__, function () {
