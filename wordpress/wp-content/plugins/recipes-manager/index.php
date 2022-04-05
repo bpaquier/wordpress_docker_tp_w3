@@ -13,7 +13,7 @@ if (!defined('ABSPATH')) {
 add_action('init', function () {
 
   /**
-   * CATEGORIE : 'Type de plat'
+   * CATEGORIE : 'Plat types'
    */
 
   $labels_platType = [
@@ -33,13 +33,54 @@ add_action('init', function () {
   register_taxonomy('type', ['recipes'], $args_platType);
 
   /**
-   * TERMS
+   * TERMS FOR 'Plat types'
    */
 
   wp_insert_term('apéritifs', 'type' );
   wp_insert_term('entrées', 'type' );
   wp_insert_term('plats', 'type' );
   wp_insert_term('desserts', 'type' );
+
+	/**
+	 * CATEGORIE : 'Ingredients'
+	 */
+
+	$labels_ingredients = [
+		'name' => 'Ingrédients',
+		'all_items' => 'Tous les ingrédients'
+	];
+
+	$args_ingredients = [
+		'labels' => $labels_ingredients,
+		'public' => true,
+		'hierarchical' => true,
+		'show_in_rest' => true,
+		'has_archive' => true,
+		'show_admin_column' => true
+	];
+
+	register_taxonomy('ingredient', ['recipes'], $args_ingredients);
+
+	/**
+	 * CATEGORIE : 'Utensils'
+	 */
+
+	$labels_utensils = [
+		'name' => 'Ustensiles',
+		'all_items' => 'Tous les ustensiles'
+	];
+
+	$args_utensils = [
+		'labels' => $labels_utensils,
+		'public' => true,
+		'hierarchical' => true,
+		'show_in_rest' => true,
+		'has_archive' => true,
+		'show_admin_column' => true
+	];
+
+	register_taxonomy('utensil', ['recipes'], $args_utensils);
+
 
   /**
    * POST-TYPE : Recipes
@@ -102,6 +143,46 @@ register_deactivation_hook(__FILE__, function () {
   remove_role("recipe_manager");
   remove_role('recipes_contributor');
 });
+
+/**
+ * Add custom field image for taxonomy
+ */
+
+function taxonomy_add_custom_field() {
+	?>
+	<div class="form-field term-image-wrap">
+		<label for="cat-image"><?php _e( 'Image' ); ?></label>
+		<p><a href="#" class="aw_upload_image_button button button-secondary"><?php _e('Upload Image'); ?></a></p>
+		<input type="text" name="category_image" id="cat-image" value="" size="40" />
+	</div>
+	<?php
+}
+add_action( 'ingredient_add_form_fields', 'taxonomy_add_custom_field', 10, 2 );
+add_action( 'utensil_add_form_fields', 'taxonomy_add_custom_field', 10, 2 );
+
+function taxonomy_edit_custom_field($term) {
+	$image = get_term_meta($term->term_id, 'category_image', true);
+	?>
+	<tr class="form-field term-image-wrap">
+		<th scope="row"><label for="category_image"><?php _e( 'Image' ); ?></label></th>
+		<td>
+			<p><a href="#" class="aw_upload_image_button button button-secondary"><?php _e('Upload Image'); ?></a></p><br/>
+			<input type="text" name="category_image" id="cat-image" value="<?php echo $image; ?>" size="40" />
+		</td>
+	</tr>
+	<?php
+}
+add_action( 'ingredient_edit_form_fields', 'taxonomy_edit_custom_field', 10, 2 );
+add_action( 'utensil_edit_form_fields', 'taxonomy_edit_custom_field', 10, 2 );
+
+function save_taxonomy_custom_meta_field( $term_id ) {
+	if ( isset( $_POST['category_image'] ) ) {
+		update_term_meta($term_id, 'category_image', $_POST['category_image']);
+	}
+}
+add_action( 'edited_category', 'save_taxonomy_custom_meta_field', 10, 2 );
+add_action( 'create_category', 'save_taxonomy_custom_meta_field', 10, 2 );
+
 
 /*
 register_uninstall_hook(__FILE__, function () {

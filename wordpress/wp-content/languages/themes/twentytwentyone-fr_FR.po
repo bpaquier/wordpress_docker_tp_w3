@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Themes - Twenty Twenty-One package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2022-01-26 00:04:22+0000\n"
+"PO-Revision-Date: 2022-03-12 17:37:27+0000\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -432,7 +432,7 @@ msgstr "Modifier %s"
 #. translators: %s: Name of current post.
 #: inc/template-functions.php:138
 msgid "Continue reading %s"
-msgstr "Poursuivre la lecture de %s"
+msgstr "Poursuivre la lecture %s"
 
 #: inc/block-styles.php:71
 msgid "Dividers"

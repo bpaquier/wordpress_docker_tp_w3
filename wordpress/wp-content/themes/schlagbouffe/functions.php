@@ -425,6 +425,7 @@ function get_navigation_items($type) {
   }
 }
 
+
 /**
  * Proper way to enqueue scripts and styles
  */
@@ -433,3 +434,13 @@ function wpdocs_theme_name_scripts() {
     wp_enqueue_script( 'script.js', get_template_directory_uri() . '/assets/js/script.js', [], false, true );
 }
 add_action( 'wp_enqueue_scripts', 'wpdocs_theme_name_scripts' );
+
+function aw_include_script() {
+
+	if ( ! did_action( 'wp_enqueue_media' ) ) {
+		wp_enqueue_media();
+	}
+
+	wp_enqueue_script( 'awscript', get_stylesheet_directory_uri() . '/assets/js/awscript.js', array('jquery'), null, false );
+}
+add_action( 'admin_enqueue_scripts', 'aw_include_script' );

@@ -2,8 +2,9 @@
   display: flex;
   justify-content: space-between;
   width: 100%;
-  padding: 0 11.4rem;
-  margin: 9rem 0;
+  max-width: 128rem;
+  margin: 9rem auto;
+  padding: 0 5rem;
 
   &__link {
     display: block;
@@ -20,6 +21,11 @@
     }
 
     &:hover {
+      color: $color-white;
+      background-color: $color-primary;
+    }
+
+    &.active {
       color: $color-white;
       background-color: $color-primary;
     }

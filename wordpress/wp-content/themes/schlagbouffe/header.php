@@ -52,7 +52,7 @@
       <span class="header__welcomeText">Bonjour <?= $current_user->user_firstname; ?> 👋</span>
       <a class="button" href="<?= wp_logout_url('/') ?>">Déconnexion</a>
     <?php else : ?>
-      <a class="button" href="/wp-login.php">Connexion</a>
+      <a class="button" href="/login">Connexion</a>
     <?php endif; ?>
 
 </header>
