@@ -66,7 +66,7 @@ if ($taxonomyParentId === 0) {
       <div class="recipe__list-content">
         <div class="recipe-list__list">
           <?php foreach($recipes as $recipe) : ?>
-          <?php cd($recipe) ?>
+
             <div class="recipe-list__item">
               <?php get_template_part('template-parts/recipe-card', 'recipe-card', $recipe); ?>
             </div>
