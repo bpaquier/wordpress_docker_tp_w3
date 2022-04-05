@@ -1,7 +1,29 @@
 <?php
-get_header();
 
-the_content();
 
-get_footer();
-?>
+if(is_user_logged_in()) {
+    get_header();
+    if(isset($_GET['status'])) {
+        if($_GET['status'] === 'publish'){
+            ?>
+                <p class="info">Your post has been published</p>
+            <?php
+        } elseif ($_GET['status'] === 'draft') {
+            ?>
+                <p class="info">Your post is on draft</p>
+            <?php
+        } elseif ($_GET['status'] === "uploadError") {
+            ?>
+                <p class="danger">Can not upload image</p>
+            <?php
+        }
+    } else {
+        the_content();
+    }
+    get_footer();
+} else {
+    wp_redirect(home_url('/login'));
+    exit;
+}
+
+

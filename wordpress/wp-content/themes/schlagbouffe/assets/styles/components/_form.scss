@@ -1,0 +1,109 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 50px auto;
+    width: 70%;
+    max-width: 500px;
+
+    .groupContainer{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px;
+        width: fit-content;
+
+        input {
+            margin-right: 5px;
+            margin-bottom: 10px;
+
+            &[type= "checkbox"], &[type= 'radio'] {
+                width: fit-content;
+            }
+        }
+        label {
+            width: fit-content;
+        }
+
+    }
+    input{
+        width: 360px;
+        border-radius: .5rem;
+
+        &::placeholder{
+            color: $color-gray-2;
+        }
+
+        &[type='file'] {
+            margin-bottom: 2rem;
+        }
+
+        &[type='text'],
+        &[type='password'],
+        &[type='mail'],
+        &[type="number"]{
+            padding: 2rem;
+            margin-bottom: 2rem;
+            border: 1px solid $color-gray-2;
+            height: 56px;
+        }
+
+        &[type='submit']{
+            border: none;
+            height: 45px;
+            background-color: $color-primary;
+            color: $color-white;
+            vertical-align: text-top;
+        }
+    }
+
+    select {
+        width: 360px;
+        height: 56px;
+        border-radius: .5rem;
+        border: 1px solid $color-gray-2;
+        margin-bottom: 2rem;
+        padding: 2rem;
+    }
+
+    label{
+        font-size: 14px;
+        color: $color-gray-2;
+        margin-bottom: 1rem;
+    }
+
+    p {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
+    div {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .newStep {
+        margin-left: 10px;
+        margin-bottom: 20px;
+    }
+
+    input[type= 'submit'] {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
+    }
+}
