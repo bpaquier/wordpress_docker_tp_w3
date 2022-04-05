@@ -49,10 +49,15 @@
 
     <?php if (is_user_logged_in()) : ?>
       <?php global $current_user; get_currentuserinfo(); ?>
-      <span class="header__welcomeText">Bonjour <?= $current_user->user_firstname; ?> 👋</span>
-      <a class="button" href="<?= wp_logout_url('/') ?>">Déconnexion</a>
+        <div class="header__buttonBox">
+          <span class="header__welcomeText">Bonjour <?= $current_user->user_firstname; ?> 👋</span>
+          <a class="button" href="<?= wp_logout_url('/') ?>">Déconnexion</a>
+        </div>
     <?php else : ?>
-      <a class="button" href="/login">Connexion</a>
+      <div class="header__buttonBox">
+        <a class="button" href="/register">S'inscrire</a>
+        <a class="button" href="/login">Connexion</a>
+      </div>
     <?php endif; ?>
 
 </header>

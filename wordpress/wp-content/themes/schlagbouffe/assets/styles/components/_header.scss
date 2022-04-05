@@ -102,6 +102,12 @@
     }
   }
 
+  &__buttonBox {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+
   &__welcomeText {
     font-size: 1.4rem;
     white-space: nowrap;
