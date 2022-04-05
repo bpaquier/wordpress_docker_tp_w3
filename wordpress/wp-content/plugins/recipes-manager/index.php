@@ -193,7 +193,7 @@ function custom_repeatable_meta_box_save($post_id) {
     $count = count( $step );
     for ( $i = 0; $i < $count; $i++ ) {
         if ( $step[$i] != '' ) :
-            $new[$i] = stripslashes( $step[$i] ); // and however you want to sanitize
+            $new[$i] = $step[$i]; // and however you want to sanitize
         endif;
     }
 
