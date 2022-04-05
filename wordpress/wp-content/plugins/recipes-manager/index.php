@@ -352,9 +352,9 @@ function save_taxonomy_custom_meta_field( $term_id ) {
 		update_term_meta($term_id, 'category_image', $_POST['category_image']);
 	}
 }
-add_action( 'edited_taxonomy', 'save_taxonomy_custom_meta_field', 10, 2 );
+add_action( 'edited_ingredient', 'save_taxonomy_custom_meta_field', 10, 2 );
 add_action( 'edited_utensil', 'save_taxonomy_custom_meta_field', 10, 2 );
-add_action( 'create_taxonomy', 'save_taxonomy_custom_meta_field', 10, 2 );
+add_action( 'create_ingredient', 'save_taxonomy_custom_meta_field', 10, 2 );
 add_action( 'create_utensil', 'save_taxonomy_custom_meta_field', 10, 2 );
 
 /**
