@@ -16,7 +16,7 @@
 
 <header class="header">
 
-    <img class="header__logo" src="<?= home_url(); ?>/wp-content/uploads/2022/03/logo.png" alt="logo ShlagBouff'" />
+    <a href="/"><img class="header__logo" src="<?= home_url(); ?>/wp-content/uploads/2022/03/logo.png" alt="logo ShlagBouff'" /></a>
 
     <nav class="header__nav">
       <ul class="header__navItems">
