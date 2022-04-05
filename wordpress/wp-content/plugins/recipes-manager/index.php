@@ -2,6 +2,7 @@
 /*
  Plugin Name: Recipes Manager
  Author: Bastien Paquier
+ Description: Ce plugin permet de pouvoir ajouter des recettes, crée des roles définis pour les administer et permet de gerer les formulaires d'ajout de recettes grâce à un shortcode.
  Version: 1.0
  */
 
