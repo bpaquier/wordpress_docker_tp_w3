@@ -363,6 +363,29 @@ table {
           width: 100%;
           height: 100%;
           box-sizing: border-box; }
+    .recipe__details-input {
+      padding-top: 2rem; }
+    .recipe__details-steps {
+      margin-top: 4rem; }
+    .recipe__details-steps-group {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem; }
+      .recipe__details-steps-group-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #dfa191; }
+    .recipe__details-step {
+      display: flex;
+      flex-direction: column;
+      gap: 4rem; }
+      .recipe__details-step-title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #000000; }
+      .recipe__details-step-content {
+        font-size: 1.6rem;
+        color: #000000; }
 
 .header {
   height: 8.5rem;
@@ -501,6 +524,39 @@ table {
     padding: 1.4rem 2.4rem;
     font-size: 1.6rem;
     border-radius: .8rem; }
+
+.footer {
+  height: 300px;
+  background-color: #000000;
+  padding: 4rem; }
+  .footer__links {
+    margin: auto;
+    width: 90vw;
+    max-width: 2000px;
+    display: flex;
+    align-items: center; }
+  .footer__navLinks {
+    display: flex;
+    width: 90vw;
+    height: 100%; }
+    .footer__navLinks--title {
+      margin-bottom: 2rem;
+      font-size: 15px;
+      font-weight: 700;
+      color: #ffffff; }
+    .footer__navLinks--links:nth-last-child(1) {
+      margin-left: 4rem;
+      height: inherit;
+      display: flex;
+      flex-direction: column; }
+    .footer__navLinks--link {
+      margin-top: 2rem;
+      font-size: 13px; }
+      .footer__navLinks--link > a {
+        text-decoration: none;
+        color: #ffffff; }
+  .footer__logo {
+    width: 20rem; }
 
 html,
 body {
