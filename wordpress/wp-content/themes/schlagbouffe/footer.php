@@ -26,7 +26,7 @@
 
         <?php endforeach; ?>
         </nav>
-        <img class="footer__logo" src="<?= home_url(); ?>/wp-content/uploads/2022/03/logo.png" alt="logo ShlagBouff'" />
+        <a href="/"><img class="footer__logo" src="<?= home_url(); ?>/wp-content/uploads/2022/03/logo.png" alt="logo ShlagBouff'" /></a>
     </div>
 </footer>
 
