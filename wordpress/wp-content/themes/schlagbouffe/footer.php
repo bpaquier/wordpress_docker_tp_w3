@@ -1,10 +1,11 @@
 <footer class="footer">
-    <div class="footer__links">
-        <nav class="footer__navLinks">
-            <?php $navMainItems = get_navigation_items('main'); ?>
+  <div class="footer__overlay"></div>
+  <div class="footer__links">
+    <nav class="footer__navLinks">
+      <?php $navMainItems = get_navigation_items('main'); ?>
             <?php $navRecipesItems = get_navigation_items('recipes'); ?>
 
-        <?php foreach ( $navMainItems as $main_item ) : ?>
+            <?php foreach ( $navMainItems as $main_item ) : ?>
 
           <?php $current = ( $main_item->object_id == get_queried_object_id() ) ? 'active' : ''; ?>
 
