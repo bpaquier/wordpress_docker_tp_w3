@@ -357,6 +357,17 @@ add_action( 'create_category', 'save_taxonomy_custom_meta_field', 10, 2 );
  * add post Form shortcode
  */
 add_shortcode('new_post_form', function () {
+
+    $ingredients = get_terms([
+        'taxonomy' => 'ingredient',
+        'hide_empty' => false
+    ]);
+
+    $ustensils = get_terms([
+            "taxonomy" => 'utensil',
+        'hide_empty' => false
+    ]);
+
     ob_start(); ?>
         <form action='<?= home_url('wp-login.php') ?>' method='post'>
             <input type="hidden" action="">
@@ -369,8 +380,53 @@ add_shortcode('new_post_form', function () {
                 <textarea id="description" name="description"></textarea>
             </div>
             <div>
-                <input type="submit" value="Publier" name="wp-submit">
+                <p>Difficulty</p>
+                <input type="radio" name="difficulty" value="easy" id="easy" />
+                <label for="easy">easy</label>
+                <br>
+                <input type="radio" name="difficulty" value="normal" id="normal" />
+                <label for="normal">normal</label>
+                <br>
+                <input type="radio" name="difficulty" value="hard" id="hard" />
+                <label for="hard">hard</label>
             </div>
+            <div>
+                <p>Price</p>
+                <input type="number" name="price" id="price"  />
+                <label for="price">euros</label>
+            </div>
+            <div>
+                <p>Preparation time</p>
+                <input type="number" name="preparation_time" id="preparation" />
+                <label for="preparation">min</label>
+            </div>
+            <div>
+                <p>Cooking time</p>
+                <input type="number" name="cooking_time" id="cooking" />
+                <label for="cooking">min</label>
+            </div>
+            <?php if(count($ingredients) > 0) : ?>
+                <p>Ingredients</p>
+                <div>
+                    <?php foreach ($ingredients as $key => $ingredient) : ?>
+                        <input type="checkbox" name="<?= $ingredient->term_id; ?>" id="<?= 'ingredient' . $key ?>" />
+                        <label for="<?= 'ingredient' . $key ?>"><?= $ingredient->name; ?></label>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+            <?php if(count($ustensils) > 0) : ?>
+                <p>Ustensils</p>
+                <div>
+                    <?php foreach ($ustensils as $key => $ustensil) : ?>
+                        <input type="checkbox" name="<?= $ustensil->term_id; ?>" id="<?= 'ustensil' . $key ?>" />
+                        <label for="<?= 'ustensil' . $key ?>"><?= $ustensil->name; ?></label>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
+            <div>
+                <input type="submit" value="Publish" name="wp-submit">
+            </div>
+
         </form>
     <?php return ob_get_clean();
 });
