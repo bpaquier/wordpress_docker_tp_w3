@@ -1,38 +1,13 @@
 <?php
 get_header();
-
-$dummy = [
-  array(
-  "title" => "Gateau aux chocolat sans oeuf",
-  "image" => "https://source.unsplash.com/random/1000x1000",
-  "link" => "https://www.google.com",
-  ),
-  array(
-    "title" => "Crèpe Saumon de Shlag au fromage de catin",
-    "image" => "https://source.unsplash.com/random/1000x1000",
-    "link" => "https://www.google.com",
-    ),
-  array(
-    "title" => "Soupe de topinambours",
-    "image" => "https://source.unsplash.com/random/1000x1000",
-    "link" => "https://www.google.com",
-  ),
-  array(
-    "title" => "Mont d’or au four",
-    "image" => "https://source.unsplash.com/random/1000x1000",
-    "link" => "https://www.google.com",
-  ),
-  array(
-    "title" => "Crèpe Saumon de Shlag au fromage de catin",
-    "image" => "https://source.unsplash.com/random/1000x1000",
-    "link" => "https://www.google.com",
-  ),
-  array(
-    "title" => "Crèpe Saumon de Shlag au fromage de catin",
-    "image" => "https://source.unsplash.com/random/1000x1000",
-    "link" => "https://www.google.com",
-  )]
+$recipesArgs = [
+        'post_type' => 'recipes',
+        'posts_per_page' => '5',
+        'orderby' => 'publish_date',
+    ];
+$query = new WP_Query($recipesArgs);
 ?>
+
 
   <main class="main">
     <?php
@@ -54,11 +29,13 @@ $dummy = [
       <div class="recipe__list-content">
         <h2 class="recipe-list__title">Nos recettes du moment</h2>
         <div class="recipe-list__list">
-        <?php foreach($dummy as $recipe): ?>
-          <div class="recipe-list__item">
-            <?php get_template_part('template-parts/recipe-card', 'recipe-card', $recipe); ?>
-          </div>
-        <?php endforeach; ?>
+        <?php while ($query->have_posts()) : ?>
+            <?php $query->the_post(); ?>
+            <div class="recipe-list__item">
+              <?php $args = array('title' => get_the_title(), 'link' => get_the_guid(), 'image' => get_the_post_thumbnail_url()) ?>
+              <?php get_template_part('template-parts/recipe-card', 'recipe-card', $args); ?>
+            </div>
+          <?php endwhile; ?>
         </div>
       </div>
     </div>
