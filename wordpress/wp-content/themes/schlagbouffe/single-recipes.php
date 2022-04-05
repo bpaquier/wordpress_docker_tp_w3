@@ -6,6 +6,13 @@ $dummy = array(
 );
 $post = get_post();
 $post_meta = get_post_meta($post->ID);
+$post_ingredients = get_the_terms($post->ID, 'ingredient', true);
+$post_utensils = get_the_terms($post->ID, 'utensil', true);
+
+function get_term_image($term_id){
+  return get_term_meta($term_id, 'category_image', true);
+}
+
 
 
 $difficulty_fr = array(
@@ -96,55 +103,42 @@ function get_cost_fr ($price) {
 
         <!-- INGREDIENT ITEMS -->
         <div class="recipe__details-content active" data-detail-content="ingredient">
-            <div class="recipe__details-content-small-cards">
-              <div class="recipe__details-content-small-card">
-                <p>
-                  <span>1</span>
-                  <span>oignons</span>
-                </p>
-                <div class="recipe__details-content-small-card-img">
-                  <img src="https://source.unsplash.com/random/500x500" alt="">
-                </div>
+          <?php if(isset($post_ingredients)) : ?>
+              <div class="recipe__details-content-small-cards">
+                <?php foreach($post_ingredients as $ingredient) :  ?>
+                  <div class="recipe__details-content-small-card">
+                    <p>
+                      <span class="recipe__details-content-small-card-name"><?= $ingredient->name ?></span>
+                    </p>
+                    <?php if(get_term_image($ingredient->term_id) !== "" && get_term_image($ingredient->term_id) !== null) : ?>
+                      <div class="recipe__details-content-small-card-img">
+                        <img src="<?= get_term_image($ingredient->term_id) ?>" alt="">
+                      </div>
+                    <?php endif; ?>
+                  </div>
+                <?php endforeach; ?>
               </div>
-              <div class="recipe__details-content-small-card">
-                <p>
-                  <span class="recipe__details-content-small-card-quantity">1</span>
-                  <span class="recipe__details-content-small-card-name">oignons</span>
-                </p>
-                <div class="recipe__details-content-small-card-img">
-                  <img src="https://source.unsplash.com/random/500x500" alt="">
-                </div>
-              </div>
-            </div>
+          <?php endif; ?>
         </div>
         <!-- USTENSILS ITEMS -->
         <div class="recipe__details-content" data-detail-content="utensils">
-          <div class="recipe__details-content-small-cards">
-              <div class="recipe__details-content-small-card">
-                <p>
-                  <span>Louche</span>
-                </p>
-                <div class="recipe__details-content-small-card-img">
-                  <img src="https://source.unsplash.com/random/500x500" alt="">
-                </div>
+          <?php if(isset($post_utensils)) : ?>  
+              <div class="recipe__details-content-small-cards">
+                <?php foreach($post_utensils as $utensil) :  ?>
+                  <div class="recipe__details-content-small-card">
+                      <p>
+                        <!-- <span class="recipe__details-content-small-card-quantity">1</span> -->
+                        <span class="recipe__details-content-small-card-name"><?= $utensil->name ?></span>
+                      </p>
+                      <?php if(get_term_image($utensil->term_id) !== "" && get_term_image($utensil->term_id) !== null) : ?>
+                        <div class="recipe__details-content-small-card-img">
+                          <img src="<?= get_term_image($utensil->term_id) ?>" alt="">
+                        </div>
+                      <?php endif; ?>
+                  </div>
+                <?php endforeach; ?>
               </div>
-              <div class="recipe__details-content-small-card">
-                <p>
-                  <span class="recipe__details-content-small-card-name">Mixeur</span>
-                </p>
-                <div class="recipe__details-content-small-card-img">
-                  <img src="https://source.unsplash.com/random/500x500" alt="">
-                </div>
-              </div>
-              <div class="recipe__details-content-small-card">
-                <p class="recipe__details-content-small-card-texts">
-                  <span class="recipe__details-content-small-card-name">Blendeur chauffant</span>
-                </p>
-                <div class="recipe__details-content-small-card-img">
-                  <img src="https://source.unsplash.com/random/500x500" alt="">
-                </div>
-              </div>
-            </div>
+          <?php endif; ?>
         </div>
 
         <div class="recipe__details-input">

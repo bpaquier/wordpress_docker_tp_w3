@@ -346,12 +346,16 @@ add_action( 'ingredient_edit_form_fields', 'taxonomy_edit_custom_field', 10, 2 )
 add_action( 'utensil_edit_form_fields', 'taxonomy_edit_custom_field', 10, 2 );
 
 function save_taxonomy_custom_meta_field( $term_id ) {
+    // cd($_POST['category_image']);
+    // die();
 	if ( isset( $_POST['category_image'] ) ) {
 		update_term_meta($term_id, 'category_image', $_POST['category_image']);
 	}
 }
-add_action( 'edited_category', 'save_taxonomy_custom_meta_field', 10, 2 );
-add_action( 'create_category', 'save_taxonomy_custom_meta_field', 10, 2 );
+add_action( 'edited_taxonomy', 'save_taxonomy_custom_meta_field', 10, 2 );
+add_action( 'edited_utensil', 'save_taxonomy_custom_meta_field', 10, 2 );
+add_action( 'create_taxonomy', 'save_taxonomy_custom_meta_field', 10, 2 );
+add_action( 'create_utensil', 'save_taxonomy_custom_meta_field', 10, 2 );
 
 /**
  * add post Form shortcode
