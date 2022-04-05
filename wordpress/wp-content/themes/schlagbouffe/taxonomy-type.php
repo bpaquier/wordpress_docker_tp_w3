@@ -65,14 +65,12 @@ if ($taxonomyParentId === 0) {
     ?>
 
     <div class="recipe-list">
-        <div class="recipe-list__header">
-        </div>
         <div class="recipe__list-content">
             <div class="recipe-list__list">
               <?php while ($query->have_posts()) : ?>
                 <?php $query->the_post(); ?>
                 <div class="recipe-list__item">
-                  <?php $args = array('title' => get_the_title(), 'link' => get_the_guid()) ?>
+                  <?php $args = array('title' => get_the_title(), 'link' => get_the_guid(), 'image' => get_the_post_thumbnail_url()) ?>
                   <?php get_template_part('template-parts/recipe-card', 'recipe-card', $args); ?>
                 </div>
               <?php endwhile; ?>
