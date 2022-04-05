@@ -46,7 +46,9 @@ form {
             color: $color-gray-2;
         }
 
-
+        &[type='file'] {
+            margin-bottom: 2rem;
+        }
 
         &[type='text'],
         &[type='password'],
@@ -96,5 +98,12 @@ form {
     .newStep {
         margin-left: 10px;
         margin-bottom: 20px;
+    }
+
+    input[type= 'submit'] {
+        cursor: pointer;
+        &:hover {
+            opacity: 0.8;
+        }
     }
 }

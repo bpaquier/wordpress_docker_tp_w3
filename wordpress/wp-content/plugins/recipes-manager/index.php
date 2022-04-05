@@ -376,10 +376,14 @@ add_shortcode('new_post_form', function () {
     $userRole = get_userdata($userID)->roles;
 
     ob_start(); ?>
-        <form action='<?= admin_url('admin-post.php') ?>' method='post'>
+        <form action='<?= admin_url('admin-post.php') ?>' method='post' enctype="multipart/form-data">
             <div>
                 <p for="title">Title</p>
                 <input id="title" type="text" name="title">
+            </div>
+            <div>
+                <p>Image</p>
+                <input type="file" name="image_upload" id="image_upload" multiple="false">
             </div>
             <div>
                 <p for="description">Description</p>
@@ -462,11 +466,12 @@ add_shortcode('new_post_form', function () {
                 </div>
             </div>
             <button class="newStep">add new step</button>
+            <input type="hidden" name="action" value="recipe_form">
+            <?php wp_nonce_field('add_recipe', 'add_recipe'); ?>
+            <?php wp_referer_field() ?>
             <div>
                 <input type="submit" value="<?= in_array( 'recipes_contributor', $userRole) ? 'Save on draft' : 'Publish' ?>" name="wp-submit">
             </div>
-            <input type="hidden" name="action" value="recipe_form">
-            <?php wp_referer_field() ?>
         </form>
         <script>
             let count = 2
@@ -482,7 +487,13 @@ add_shortcode('new_post_form', function () {
     <?php return ob_get_clean();
 });
 
+
 add_action('admin_post_recipe_form', function() {
+
+    if (!wp_verify_nonce($_POST['add_recipe'], 'add_recipe')) {
+        die('nonce invalide');
+    }
+
     $userID = get_current_user_id();
     $userRole = get_userdata($userID)->roles;
 
@@ -530,7 +541,19 @@ add_action('admin_post_recipe_form', function() {
        ]
    ];
 
-   wp_insert_post($args);
+   $postId = wp_insert_post($args);
+
+   if($_FILES['image_upload']['error'] == 0) {
+       $attachementId = media_handle_upload('image_upload', $postId);
+
+       if(is_wp_error($attachementId)) {
+           wp_redirect($_POST['_wp_http_referer'] . '?status=uploadError');
+       } else {
+            set_post_thumbnail($postId, $attachementId);
+       }
+   }
+
+
 
    $status = in_array( 'recipes_contributor', $userRole) ? 'draft' : 'publish';
 
