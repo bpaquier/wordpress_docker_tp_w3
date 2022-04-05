@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : db
--- Généré le : mar. 05 avr. 2022 à 15:57
+-- Généré le : mar. 05 avr. 2022 à 16:51
 -- Version du serveur : 10.6.5-MariaDB-1:10.6.5+maria~focal
 -- Version de PHP : 7.4.26
 
@@ -222,7 +222,7 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (115, 'widget_tag_cloud', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (116, 'widget_nav_menu', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
 (117, 'widget_custom_html', 'a:1:{s:12:\"_multiwidget\";i:1;}', 'yes'),
-(118, '_transient_doing_cron', '1649174129.6900079250335693359375', 'yes'),
+(118, '_transient_doing_cron', '1649177462.8144979476928710937500', 'yes'),
 (136, 'can_compress_scripts', '0', 'no'),
 (143, '_transient_timeout_global_styles_twentytwentytwo', '1646833878', 'no'),
 (144, '_transient_global_styles_twentytwentytwo', 'body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--color--foreground: #000000;--wp--preset--color--background: #ffffff;--wp--preset--color--primary: #1a4548;--wp--preset--color--secondary: #ffe2c7;--wp--preset--color--tertiary: #F6F6F6;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--gradient--vertical-secondary-to-tertiary: linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--tertiary) 100%);--wp--preset--gradient--vertical-secondary-to-background: linear-gradient(to bottom,var(--wp--preset--color--secondary) 0%,var(--wp--preset--color--background) 100%);--wp--preset--gradient--vertical-tertiary-to-background: linear-gradient(to bottom,var(--wp--preset--color--tertiary) 0%,var(--wp--preset--color--background) 100%);--wp--preset--gradient--diagonal-primary-to-foreground: linear-gradient(to bottom right,var(--wp--preset--color--primary) 0%,var(--wp--preset--color--foreground) 100%);--wp--preset--gradient--diagonal-secondary-to-background: linear-gradient(to bottom right,var(--wp--preset--color--secondary) 50%,var(--wp--preset--color--background) 50%);--wp--preset--gradient--diagonal-background-to-secondary: linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--secondary) 50%);--wp--preset--gradient--diagonal-tertiary-to-background: linear-gradient(to bottom right,var(--wp--preset--color--tertiary) 50%,var(--wp--preset--color--background) 50%);--wp--preset--gradient--diagonal-background-to-tertiary: linear-gradient(to bottom right,var(--wp--preset--color--background) 50%,var(--wp--preset--color--tertiary) 50%);--wp--preset--duotone--dark-grayscale: url(\'#wp-duotone-dark-grayscale\');--wp--preset--duotone--grayscale: url(\'#wp-duotone-grayscale\');--wp--preset--duotone--purple-yellow: url(\'#wp-duotone-purple-yellow\');--wp--preset--duotone--blue-red: url(\'#wp-duotone-blue-red\');--wp--preset--duotone--midnight: url(\'#wp-duotone-midnight\');--wp--preset--duotone--magenta-yellow: url(\'#wp-duotone-magenta-yellow\');--wp--preset--duotone--purple-green: url(\'#wp-duotone-purple-green\');--wp--preset--duotone--blue-orange: url(\'#wp-duotone-blue-orange\');--wp--preset--duotone--foreground-and-background: url(\'#wp-duotone-foreground-and-background\');--wp--preset--duotone--foreground-and-secondary: url(\'#wp-duotone-foreground-and-secondary\');--wp--preset--duotone--foreground-and-tertiary: url(\'#wp-duotone-foreground-and-tertiary\');--wp--preset--duotone--primary-and-background: url(\'#wp-duotone-primary-and-background\');--wp--preset--duotone--primary-and-secondary: url(\'#wp-duotone-primary-and-secondary\');--wp--preset--duotone--primary-and-tertiary: url(\'#wp-duotone-primary-and-tertiary\');--wp--preset--font-size--small: 1rem;--wp--preset--font-size--medium: 1.125rem;--wp--preset--font-size--large: 1.75rem;--wp--preset--font-size--x-large: clamp(1.75rem, 3vw, 2.25rem);--wp--preset--font-family--system-font: -apple-system,BlinkMacSystemFont,\"Segoe UI\",Roboto,Oxygen-Sans,Ubuntu,Cantarell,\"Helvetica Neue\",sans-serif;--wp--preset--font-family--source-serif-pro: \"Source Serif Pro\", serif;--wp--custom--spacing--small: max(1.25rem, 5vw);--wp--custom--spacing--medium: clamp(2rem, 8vw, calc(4 * var(--wp--style--block-gap)));--wp--custom--spacing--large: clamp(4rem, 10vw, 8rem);--wp--custom--spacing--outer: var(--wp--custom--spacing--small, 1.25rem);--wp--custom--typography--font-size--huge: clamp(2.25rem, 4vw, 2.75rem);--wp--custom--typography--font-size--gigantic: clamp(2.75rem, 6vw, 3.25rem);--wp--custom--typography--font-size--colossal: clamp(3.25rem, 8vw, 6.25rem);--wp--custom--typography--line-height--tiny: 1.15;--wp--custom--typography--line-height--small: 1.2;--wp--custom--typography--line-height--medium: 1.4;--wp--custom--typography--line-height--normal: 1.6;}body { margin: 0; }body{background-color: var(--wp--preset--color--background);color: var(--wp--preset--color--foreground);font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);line-height: var(--wp--custom--typography--line-height--normal);--wp--style--block-gap: 1.5rem;}.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }.wp-site-blocks > * { margin-top: 0; margin-bottom: 0; }.wp-site-blocks > * + * { margin-top: var( --wp--style--block-gap ); }h1{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--colossal);font-weight: 300;line-height: var(--wp--custom--typography--line-height--tiny);}h2{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--gigantic);font-weight: 300;line-height: var(--wp--custom--typography--line-height--small);}h3{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--huge);font-weight: 300;line-height: var(--wp--custom--typography--line-height--tiny);}h4{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--preset--font-size--x-large);font-weight: 300;line-height: var(--wp--custom--typography--line-height--tiny);}h5{font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);font-weight: 700;line-height: var(--wp--custom--typography--line-height--normal);text-transform: uppercase;}h6{font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);font-weight: 400;line-height: var(--wp--custom--typography--line-height--normal);text-transform: uppercase;}a{color: var(--wp--preset--color--foreground);}.wp-block-button__link{background-color: var(--wp--preset--color--primary);border-radius: 0;color: var(--wp--preset--color--background);font-size: var(--wp--preset--font-size--medium);}.wp-block-post-title{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--gigantic);font-weight: 300;line-height: var(--wp--custom--typography--line-height--tiny);}.wp-block-post-comments{padding-top: var(--wp--custom--spacing--small);}.wp-block-pullquote{border-width: 1px 0;}.wp-block-query-title{font-family: var(--wp--preset--font-family--source-serif-pro);font-size: var(--wp--custom--typography--font-size--gigantic);font-weight: 300;line-height: var(--wp--custom--typography--line-height--small);}.wp-block-quote{border-width: 1px;}.wp-block-site-title{font-family: var(--wp--preset--font-family--system-font);font-size: var(--wp--preset--font-size--medium);font-weight: normal;line-height: var(--wp--custom--typography--line-height--normal);}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-foreground-color{color: var(--wp--preset--color--foreground) !important;}.has-background-color{color: var(--wp--preset--color--background) !important;}.has-primary-color{color: var(--wp--preset--color--primary) !important;}.has-secondary-color{color: var(--wp--preset--color--secondary) !important;}.has-tertiary-color{color: var(--wp--preset--color--tertiary) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-foreground-background-color{background-color: var(--wp--preset--color--foreground) !important;}.has-background-background-color{background-color: var(--wp--preset--color--background) !important;}.has-primary-background-color{background-color: var(--wp--preset--color--primary) !important;}.has-secondary-background-color{background-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-background-color{background-color: var(--wp--preset--color--tertiary) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-foreground-border-color{border-color: var(--wp--preset--color--foreground) !important;}.has-background-border-color{border-color: var(--wp--preset--color--background) !important;}.has-primary-border-color{border-color: var(--wp--preset--color--primary) !important;}.has-secondary-border-color{border-color: var(--wp--preset--color--secondary) !important;}.has-tertiary-border-color{border-color: var(--wp--preset--color--tertiary) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-vertical-secondary-to-tertiary-gradient-background{background: var(--wp--preset--gradient--vertical-secondary-to-tertiary) !important;}.has-vertical-secondary-to-background-gradient-background{background: var(--wp--preset--gradient--vertical-secondary-to-background) !important;}.has-vertical-tertiary-to-background-gradient-background{background: var(--wp--preset--gradient--vertical-tertiary-to-background) !important;}.has-diagonal-primary-to-foreground-gradient-background{background: var(--wp--preset--gradient--diagonal-primary-to-foreground) !important;}.has-diagonal-secondary-to-background-gradient-background{background: var(--wp--preset--gradient--diagonal-secondary-to-background) !important;}.has-diagonal-background-to-secondary-gradient-background{background: var(--wp--preset--gradient--diagonal-background-to-secondary) !important;}.has-diagonal-tertiary-to-background-gradient-background{background: var(--wp--preset--gradient--diagonal-tertiary-to-background) !important;}.has-diagonal-background-to-tertiary-gradient-background{background: var(--wp--preset--gradient--diagonal-background-to-tertiary) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}.has-system-font-font-family{font-family: var(--wp--preset--font-family--system-font) !important;}.has-source-serif-pro-font-family{font-family: var(--wp--preset--font-family--source-serif-pro) !important;}', 'no'),
@@ -296,8 +296,11 @@ INSERT INTO `wp_options` (`option_id`, `option_name`, `option_value`, `autoload`
 (618, '_cdp_no_intro', 'a:1:{i:0;i:1;}', 'yes'),
 (644, 'utensil_children', 'a:0:{}', 'yes'),
 (663, 'ingredient_children', 'a:0:{}', 'yes'),
-(664, '_transient_timeout_global_styles_schlagbouffe', '1649174247', 'no'),
-(665, '_transient_global_styles_schlagbouffe', 'body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url(\'#wp-duotone-dark-grayscale\');--wp--preset--duotone--grayscale: url(\'#wp-duotone-grayscale\');--wp--preset--duotone--purple-yellow: url(\'#wp-duotone-purple-yellow\');--wp--preset--duotone--blue-red: url(\'#wp-duotone-blue-red\');--wp--preset--duotone--midnight: url(\'#wp-duotone-midnight\');--wp--preset--duotone--magenta-yellow: url(\'#wp-duotone-magenta-yellow\');--wp--preset--duotone--purple-green: url(\'#wp-duotone-purple-green\');--wp--preset--duotone--blue-orange: url(\'#wp-duotone-blue-orange\');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}', 'no');
+(671, 'cdp_latest_slow_performance', '1', 'yes'),
+(672, 'cdp_copy_logs_times', 'a:3:{i:0;a:6:{s:6:\"amount\";s:1:\"1\";s:4:\"time\";d:0.08844685554504395;s:6:\"perOne\";d:0.08844685554504395;s:4:\"data\";i:1649176847;s:6:\"memory\";i:33679272;s:4:\"peak\";i:35651584;}i:1;a:6:{s:6:\"amount\";s:1:\"1\";s:4:\"time\";d:0.08289480209350586;s:6:\"perOne\";d:0.08289480209350586;s:4:\"data\";i:1649176166;s:6:\"memory\";i:33677128;s:4:\"peak\";i:35651584;}i:2;a:6:{s:6:\"amount\";s:1:\"1\";s:4:\"time\";d:0.08608388900756836;s:6:\"perOne\";d:0.08608388900756836;s:4:\"data\";i:1649175464;s:6:\"memory\";i:33691424;s:4:\"peak\";i:35651584;}}', 'yes'),
+(673, 'cdp_dismiss_perf_notice', '1', 'yes'),
+(680, '_transient_timeout_global_styles_schlagbouffe', '1649177525', 'no'),
+(681, '_transient_global_styles_schlagbouffe', 'body{--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgba(6,147,227,1) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgba(252,185,0,1) 0%,rgba(255,105,0,1) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgba(255,105,0,1) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--duotone--dark-grayscale: url(\'#wp-duotone-dark-grayscale\');--wp--preset--duotone--grayscale: url(\'#wp-duotone-grayscale\');--wp--preset--duotone--purple-yellow: url(\'#wp-duotone-purple-yellow\');--wp--preset--duotone--blue-red: url(\'#wp-duotone-blue-red\');--wp--preset--duotone--midnight: url(\'#wp-duotone-midnight\');--wp--preset--duotone--magenta-yellow: url(\'#wp-duotone-magenta-yellow\');--wp--preset--duotone--purple-green: url(\'#wp-duotone-purple-green\');--wp--preset--duotone--blue-orange: url(\'#wp-duotone-blue-orange\');--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}', 'no');
 
 -- --------------------------------------------------------
 
@@ -605,7 +608,68 @@ INSERT INTO `wp_postmeta` (`meta_id`, `post_id`, `meta_key`, `meta_value`) VALUE
 (317, 109, '_wp_trash_meta_status', 'draft'),
 (318, 109, '_wp_trash_meta_time', '1649171124'),
 (319, 109, '_wp_desired_post_slug', ''),
-(320, 113, '_edit_lock', '1649173723:1');
+(320, 113, '_edit_lock', '1649173723:1'),
+(321, 114, '_edit_lock', '1649175454:1'),
+(322, 115, '_cdp_origin', '111'),
+(323, 115, '_cdp_origin_site', '-1'),
+(324, 115, '_cdp_origin_title', ' Blanquette de veau #[Counter]'),
+(325, 115, '_cdp_counter', '2'),
+(326, 115, '_thumbnail_id', '116'),
+(327, 115, '_edit_lock', '1649176079:1'),
+(328, 115, '_edit_last', '1'),
+(329, 115, '_wp_old_slug', 'blanquette-de-veau'),
+(330, 115, 'recipe_steps', 'a:3:{i:0;s:155:\"  Découper le poulet en morceaux, nettoyer les moules, émincer le chorizo et les poivrons, peler et concasser les tomates, hacher les oignons et l\'ail.  \";i:1;s:287:\"  Mettre l\'huile dans le plat et faire dorer les morceaux de poulet. Ajouter les calamars, les oignons tout en remuant puis mettre les tomates, les poivrons, l\'ail, le safran, le sel et le poivre. Laisser cuire 5 minutes en remuant avant d\'incorporer le riz, le chorizo et le bouillon.  \";i:2;s:106:\"  Y plonger les crevettes et les moules, porter à ébullition puis laisser cuire environ 30-35 minutes.  \";}'),
+(331, 115, 'recipe_difficulty', 'normal'),
+(335, 116, '_wp_attached_file', '2022/04/paella.png'),
+(336, 116, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1200;s:6:\"height\";i:800;s:4:\"file\";s:18:\"2022/04/paella.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(337, 115, '_wp_old_slug', 'blanquette-de-veau-2'),
+(338, 117, '_cdp_origin', '115'),
+(339, 117, '_cdp_origin_site', '-1'),
+(340, 117, '_cdp_origin_title', ' Paëlla fruits de mer #[Counter]'),
+(341, 117, '_cdp_counter', '2'),
+(342, 117, '_cdp_origin', '111'),
+(343, 117, '_thumbnail_id', '118'),
+(344, 117, '_wp_old_slug', 'blanquette-de-veau'),
+(345, 117, '_wp_old_slug', 'blanquette-de-veau-2'),
+(346, 117, '_edit_lock', '1649176636:1'),
+(347, 117, '_edit_last', '1'),
+(348, 117, '_wp_old_slug', 'paella-fruits-de-mer'),
+(349, 117, 'recipe_steps', 'a:8:{i:0;s:41:\" Bien essorer les filets de poisson cru. \";i:1;s:129:\" Coupez en morceaux et hachez au robot. Salez, poivrez. Ajouter la crème fraîche puis les oeufs et les herbes. Bien mélanger. \";i:2;s:146:\" Versez la moitié de la préparation dans les moules en silicone, placez la noix de st jacques et recouvrir du reste de la préparation. Tassez. \";i:3;s:38:\" Faites cuire 20 mn à 160°C (Th 6). \";i:4;s:22:\" Préparez la sauce : \";i:5;s:58:\" Délayez la moutarde avec la crème et le jus de citron. \";i:6;s:94:\" Ajoutez le beurre en morceaux, faites chauffer sans bouillir, ajouter la ciboulette hachée. \";i:7;s:63:\" Nappez les assiettes de sauce et poser la terrine par dessus. \";}'),
+(350, 117, 'recipe_difficulty', 'easy'),
+(351, 117, 'recipe_price', '22'),
+(352, 117, 'cooking_time', '15'),
+(353, 117, 'preparation_time', '15'),
+(354, 118, '_wp_attached_file', '2022/04/terrine-de-poisson.png'),
+(355, 118, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1200;s:6:\"height\";i:800;s:4:\"file\";s:30:\"2022/04/terrine-de-poisson.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(356, 119, '_wp_attached_file', '2022/04/hachis-parmentier-vege.png'),
+(357, 119, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1200;s:6:\"height\";i:1800;s:4:\"file\";s:34:\"2022/04/hachis-parmentier-vege.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(358, 120, '_cdp_origin', '117'),
+(359, 120, '_cdp_origin_site', '-1'),
+(360, 120, '_cdp_origin_title', ' Terrine de poisson et saint-jacques aux herbes #[Counter]'),
+(361, 120, '_cdp_counter', '2'),
+(362, 120, '_cdp_origin', '115'),
+(363, 120, '_cdp_origin', '111'),
+(364, 120, '_thumbnail_id', '119'),
+(365, 120, '_wp_old_slug', 'blanquette-de-veau'),
+(366, 120, '_wp_old_slug', 'blanquette-de-veau-2'),
+(367, 120, '_wp_old_slug', 'paella-fruits-de-mer'),
+(368, 120, '_edit_lock', '1649176960:1'),
+(369, 120, '_edit_last', '1'),
+(370, 120, 'recipe_steps', 'a:9:{i:0;s:153:\"Dans un robot, mixez en un hachis moyen les légumes épluchés et coupés grossièrement suivants : navet, carottes, céleri, champignons, oignons, ail.\";i:1;s:31:\"Préchauffez le four à 220°C.\";i:2;s:170:\"Pelez les pommes de terre, et coupez en morceaux et faire cuire à l\'eau 20 minutes. Faites cuire à la vapeur au dessus des pommes de terre le blanc de poireau émincé.\";i:3;s:217:\"Pendant ce temps, dans un faitout, chauffez à feu vif l\'huile d\'olive et faites revenir le hachis de légume 15 minutes en remuant souvent. Les légumes vont cuire dans leur jus et leur vapeur. Bien saler et poivrer.\";i:4;s:83:\"Dans la même cuve du robot, mixez ensemble la tranche de pain de mie et le persil.\";i:5;s:167:\"Eteignez le feu sous les légumes lorsqu\'ils sont cuits mais encore un peu fermes, puis rajoutez la sauce soja, le mélange persil-pain, et rectifiez l\'assaisonnement.\";i:6;s:143:\"Montez le hachis parmentier dans un plat graissé, avec par-dessus le hachis les pommes de terre en purée épaisse mélangée avec le poireau.\";i:7;s:23:\"Cuisez 35 mn à 220°C.\";i:8;s:29:\"Servez avec une salade verte.\";}'),
+(371, 120, 'recipe_difficulty', 'easy'),
+(372, 120, 'recipe_price', '18'),
+(373, 120, 'cooking_time', '50'),
+(374, 120, 'preparation_time', '22'),
+(375, 121, '_wp_attached_file', '2022/04/pates-ricoata.png'),
+(376, 121, '_wp_attachment_metadata', 'a:5:{s:5:\"width\";i:1200;s:6:\"height\";i:1798;s:4:\"file\";s:25:\"2022/04/pates-ricoata.png\";s:5:\"sizes\";a:0:{}s:10:\"image_meta\";a:12:{s:8:\"aperture\";s:1:\"0\";s:6:\"credit\";s:0:\"\";s:6:\"camera\";s:0:\"\";s:7:\"caption\";s:0:\"\";s:17:\"created_timestamp\";s:1:\"0\";s:9:\"copyright\";s:0:\"\";s:12:\"focal_length\";s:1:\"0\";s:3:\"iso\";s:1:\"0\";s:13:\"shutter_speed\";s:1:\"0\";s:5:\"title\";s:0:\"\";s:11:\"orientation\";s:1:\"0\";s:8:\"keywords\";a:0:{}}}'),
+(377, 122, '_edit_lock', '1649177477:1'),
+(378, 122, '_edit_last', '1'),
+(379, 122, '_thumbnail_id', '121'),
+(380, 122, 'recipe_steps', 'a:6:{i:0;s:94:\"Égouttez et coupez 400g de tomates pelées en morceaux tout en conservant la purée de côté\";i:1;s:47:\"Hachez grossièrement les olives et l’oignon.\";i:2;s:67:\"Ajoutez les tomates concassées aux olives et à l’oignon haché.\";i:3;s:215:\"Ouvrez également la deuxième boîte de tomates pelées et récupérez la purée de tomates en l\'ajoutant à celle déjà mise de côté. Assaisonnez de sel, poivre et ajoutez 2 cuillères d\'huile. Laissez reposer.\";i:4;s:118:\"Pendant ce temps, faites cuire les pâtes dans de l\'eau salée et faites chauffer la purée de tomates mise de côté.\";i:5;s:255:\"Égouttez les pâtes et versez-les dans un bol avec la sauce tomate chaude, en ajoutant la sauce à base de tomates pelées, olives et oignon. Ajoutez du basilic frais pour parfumer la préparation et servir avec de la ricotta salée fraîchement râpée.\";}'),
+(381, 122, 'recipe_difficulty', 'easy'),
+(382, 122, 'recipe_price', '12'),
+(383, 122, 'cooking_time', '10'),
+(384, 122, 'preparation_time', '10');
 
 -- --------------------------------------------------------
 
@@ -753,7 +817,16 @@ INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post
 (111, 1, '2022-04-05 16:10:39', '2022-04-05 14:10:39', '', 'Blanquette de veau', '', 'publish', 'closed', 'closed', '', 'blanquette-de-veau', '', '', '2022-04-05 16:12:31', '2022-04-05 14:12:31', '', 0, 'http://localhost:2345/?post_type=recipes&#038;p=111', 0, 'recipes', '', 0);
 INSERT INTO `wp_posts` (`ID`, `post_author`, `post_date`, `post_date_gmt`, `post_content`, `post_title`, `post_excerpt`, `post_status`, `comment_status`, `ping_status`, `post_password`, `post_name`, `to_ping`, `pinged`, `post_modified`, `post_modified_gmt`, `post_content_filtered`, `post_parent`, `guid`, `menu_order`, `post_type`, `post_mime_type`, `comment_count`) VALUES
 (112, 1, '2022-04-05 16:28:41', '2022-04-05 14:28:41', '', 'footerBackground', '', 'inherit', 'open', 'closed', '', 'footerbackground', '', '', '2022-04-05 16:28:41', '2022-04-05 14:28:41', '', 0, 'http://localhost:2345/wp-content/uploads/2022/04/footerBackground.png', 0, 'attachment', 'image/png', 0),
-(113, 1, '2022-04-05 17:48:27', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2022-04-05 17:48:27', '0000-00-00 00:00:00', '', 0, 'http://localhost:2345/?post_type=recipes&p=113', 0, 'recipes', '', 0);
+(113, 1, '2022-04-05 17:48:27', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2022-04-05 17:48:27', '0000-00-00 00:00:00', '', 0, 'http://localhost:2345/?post_type=recipes&p=113', 0, 'recipes', '', 0),
+(114, 1, '2022-04-05 17:59:45', '0000-00-00 00:00:00', '', 'Brouillon auto', '', 'auto-draft', 'closed', 'closed', '', '', '', '', '2022-04-05 17:59:45', '0000-00-00 00:00:00', '', 0, 'http://localhost:2345/?post_type=recipes&p=114', 0, 'recipes', '', 0),
+(115, 1, '2022-04-05 18:23:08', '2022-04-05 16:23:08', '', 'Paëlla fruits de mer', '', 'publish', 'closed', 'closed', '', 'paella-fruits-de-mer', '', '', '2022-04-05 18:27:59', '2022-04-05 16:27:59', '', 0, 'http://localhost:2345/?post_type=recipes&#038;p=115', 0, 'recipes', '', 0),
+(116, 1, '2022-04-05 18:24:45', '2022-04-05 16:24:45', '', 'paella', '', 'inherit', 'open', 'closed', '', 'paella', '', '', '2022-04-05 18:24:45', '2022-04-05 16:24:45', '', 0, 'http://localhost:2345/wp-content/uploads/2022/04/paella.png', 0, 'attachment', 'image/png', 0),
+(117, 1, '2022-04-05 18:34:45', '2022-04-05 16:34:45', '', 'Terrine de poisson et saint-jacques aux herbes', '', 'publish', 'closed', 'closed', '', 'terrine-poisson-saint-jacques-aux-herbes', '', '', '2022-04-05 18:36:37', '2022-04-05 16:36:37', '', 0, 'http://localhost:2345/?post_type=recipes&#038;p=117', 0, 'recipes', '', 0),
+(118, 1, '2022-04-05 18:35:56', '2022-04-05 16:35:56', '', 'terrine-de-poisson', '', 'inherit', 'open', 'closed', '', 'terrine-de-poisson', '', '', '2022-04-05 18:35:56', '2022-04-05 16:35:56', '', 0, 'http://localhost:2345/wp-content/uploads/2022/04/terrine-de-poisson.png', 0, 'attachment', 'image/png', 0),
+(119, 1, '2022-04-05 18:39:49', '2022-04-05 16:39:49', '', 'hachis-parmentier-vege', '', 'inherit', 'open', 'closed', '', 'hachis-parmentier-vege', '', '', '2022-04-05 18:39:49', '2022-04-05 16:39:49', '', 0, 'http://localhost:2345/wp-content/uploads/2022/04/hachis-parmentier-vege.png', 0, 'attachment', 'image/png', 0),
+(120, 1, '2022-04-05 18:44:56', '2022-04-05 16:44:56', '', 'Hachis parmentier végétarien', '', 'publish', 'closed', 'closed', '', 'hachis-parmentier-vegetarien', '', '', '2022-04-05 18:44:56', '2022-04-05 16:44:56', '', 0, 'http://localhost:2345/?post_type=recipes&#038;p=120', 0, 'recipes', '', 0),
+(121, 1, '2022-04-05 18:48:07', '2022-04-05 16:48:07', '', 'pates-ricoata', '', 'inherit', 'open', 'closed', '', 'pates-ricoata', '', '', '2022-04-05 18:48:07', '2022-04-05 16:48:07', '', 0, 'http://localhost:2345/wp-content/uploads/2022/04/pates-ricoata.png', 0, 'attachment', 'image/png', 0),
+(122, 1, '2022-04-05 18:50:59', '2022-04-05 16:50:59', '', 'Trofie à la ricotta et aux tomates pelées', '', 'publish', 'closed', 'closed', '', 'trofie-a-la-ricotta-et-aux-tomates-pelees', '', '', '2022-04-05 18:50:59', '2022-04-05 16:50:59', '', 0, 'http://localhost:2345/?post_type=recipes&#038;p=122', 0, 'recipes', '', 0);
 
 -- --------------------------------------------------------
 
@@ -908,7 +981,84 @@ INSERT INTO `wp_term_relationships` (`object_id`, `term_taxonomy_id`, `term_orde
 (111, 43, 0),
 (111, 44, 0),
 (111, 45, 0),
-(111, 46, 0);
+(111, 46, 0),
+(115, 6, 0),
+(115, 27, 0),
+(115, 28, 0),
+(115, 29, 0),
+(115, 30, 0),
+(115, 31, 0),
+(115, 32, 0),
+(115, 33, 0),
+(115, 34, 0),
+(115, 35, 0),
+(115, 36, 0),
+(115, 37, 0),
+(115, 38, 0),
+(115, 39, 0),
+(115, 40, 0),
+(115, 41, 0),
+(115, 42, 0),
+(115, 43, 0),
+(115, 44, 0),
+(115, 45, 0),
+(115, 46, 0),
+(117, 6, 0),
+(117, 24, 0),
+(117, 28, 0),
+(117, 29, 0),
+(117, 30, 0),
+(117, 31, 0),
+(117, 32, 0),
+(117, 33, 0),
+(117, 34, 0),
+(117, 35, 0),
+(117, 36, 0),
+(117, 37, 0),
+(117, 38, 0),
+(117, 39, 0),
+(117, 40, 0),
+(117, 41, 0),
+(117, 42, 0),
+(117, 43, 0),
+(117, 44, 0),
+(117, 45, 0),
+(117, 46, 0),
+(120, 6, 0),
+(120, 25, 0),
+(120, 28, 0),
+(120, 29, 0),
+(120, 32, 0),
+(120, 33, 0),
+(120, 34, 0),
+(120, 36, 0),
+(120, 37, 0),
+(120, 38, 0),
+(120, 39, 0),
+(120, 40, 0),
+(120, 41, 0),
+(120, 42, 0),
+(120, 43, 0),
+(120, 44, 0),
+(120, 45, 0),
+(120, 46, 0),
+(122, 6, 0),
+(122, 26, 0),
+(122, 28, 0),
+(122, 29, 0),
+(122, 30, 0),
+(122, 33, 0),
+(122, 34, 0),
+(122, 35, 0),
+(122, 37, 0),
+(122, 38, 0),
+(122, 39, 0),
+(122, 40, 0),
+(122, 41, 0),
+(122, 42, 0),
+(122, 43, 0),
+(122, 45, 0),
+(122, 46, 0);
 
 -- --------------------------------------------------------
 
@@ -935,7 +1085,7 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 (3, 3, 'nav_menu', '', 0, 6),
 (4, 4, 'type', '', 0, 1),
 (5, 5, 'type', '', 0, 0),
-(6, 6, 'type', '', 0, 1),
+(6, 6, 'type', '', 0, 5),
 (7, 7, 'type', '', 0, 0),
 (8, 8, 'type', '', 4, 0),
 (9, 9, 'type', '', 4, 0),
@@ -953,29 +1103,29 @@ INSERT INTO `wp_term_taxonomy` (`term_taxonomy_id`, `term_id`, `taxonomy`, `desc
 (21, 21, 'type', '', 5, 0),
 (22, 22, 'type', '', 5, 0),
 (23, 23, 'type', '', 6, 1),
-(24, 24, 'type', '', 6, 0),
-(25, 25, 'type', '', 6, 0),
-(26, 26, 'type', '', 6, 0),
-(27, 27, 'type', '', 6, 0),
-(28, 28, 'ingredient', '', 0, 1),
-(29, 29, 'ingredient', '', 0, 1),
-(30, 30, 'ingredient', '', 0, 1),
-(31, 31, 'ingredient', '', 0, 1),
-(32, 32, 'ingredient', '', 0, 1),
-(33, 33, 'ingredient', '', 0, 1),
-(34, 34, 'ingredient', '', 0, 1),
-(35, 35, 'ingredient', '', 0, 1),
-(36, 36, 'ingredient', '', 0, 1),
-(37, 37, 'ingredient', '', 0, 1),
-(38, 38, 'ingredient', '', 0, 1),
-(39, 39, 'ingredient', '', 0, 1),
-(40, 40, 'utensil', '', 0, 1),
-(41, 41, 'utensil', '', 0, 1),
-(42, 42, 'utensil', '', 0, 1),
-(43, 43, 'utensil', '', 0, 1),
-(44, 44, 'utensil', '', 0, 1),
-(45, 45, 'utensil', '', 0, 1),
-(46, 46, 'utensil', '', 0, 1);
+(24, 24, 'type', '', 6, 1),
+(25, 25, 'type', '', 6, 1),
+(26, 26, 'type', '', 6, 1),
+(27, 27, 'type', '', 6, 1),
+(28, 28, 'ingredient', '', 0, 5),
+(29, 29, 'ingredient', '', 0, 5),
+(30, 30, 'ingredient', '', 0, 4),
+(31, 31, 'ingredient', '', 0, 3),
+(32, 32, 'ingredient', '', 0, 4),
+(33, 33, 'ingredient', '', 0, 5),
+(34, 34, 'ingredient', '', 0, 5),
+(35, 35, 'ingredient', '', 0, 4),
+(36, 36, 'ingredient', '', 0, 4),
+(37, 37, 'ingredient', '', 0, 5),
+(38, 38, 'ingredient', '', 0, 5),
+(39, 39, 'ingredient', '', 0, 5),
+(40, 40, 'utensil', '', 0, 5),
+(41, 41, 'utensil', '', 0, 5),
+(42, 42, 'utensil', '', 0, 5),
+(43, 43, 'utensil', '', 0, 5),
+(44, 44, 'utensil', '', 0, 4),
+(45, 45, 'utensil', '', 0, 5),
+(46, 46, 'utensil', '', 0, 5);
 
 -- --------------------------------------------------------
 
@@ -1079,7 +1229,7 @@ INSERT INTO `wp_usermeta` (`umeta_id`, `user_id`, `meta_key`, `meta_value`) VALU
 (98, 6, 'wp_capabilities', 'a:1:{s:19:\"recipes_contributor\";b:1;}'),
 (99, 6, 'wp_user_level', '0'),
 (100, 6, 'dismissed_wp_pointers', ''),
-(101, 1, 'session_tokens', 'a:2:{s:64:\"28a217ab763589521268d7e369b559002926b267714e9a6eb34b6200f4089121\";a:4:{s:10:\"expiration\";i:1649316344;s:2:\"ip\";s:10:\"172.25.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36\";s:5:\"login\";i:1649143544;}s:64:\"940263dd4301a1b11907b2bea6c74727eb20e1ddcba939985598f52cc61db780\";a:4:{s:10:\"expiration\";i:1649332737;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36\";s:5:\"login\";i:1649159937;}}');
+(101, 1, 'session_tokens', 'a:2:{s:64:\"28a217ab763589521268d7e369b559002926b267714e9a6eb34b6200f4089121\";a:4:{s:10:\"expiration\";i:1649316344;s:2:\"ip\";s:10:\"172.25.0.1\";s:2:\"ua\";s:120:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/99.0.4844.51 Safari/537.36\";s:5:\"login\";i:1649143544;}s:64:\"ea908bf7ab3928151f37b587dbaa6d2b2f942f53ff2fae426282ba1d0a910131\";a:4:{s:10:\"expiration\";i:1649347576;s:2:\"ip\";s:10:\"172.18.0.1\";s:2:\"ua\";s:121:\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.4896.60 Safari/537.36\";s:5:\"login\";i:1649174776;}}');
 
 -- --------------------------------------------------------
 
@@ -1241,19 +1391,19 @@ ALTER TABLE `wp_links`
 -- AUTO_INCREMENT pour la table `wp_options`
 --
 ALTER TABLE `wp_options`
-  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=666;
+  MODIFY `option_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=682;
 
 --
 -- AUTO_INCREMENT pour la table `wp_postmeta`
 --
 ALTER TABLE `wp_postmeta`
-  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=321;
+  MODIFY `meta_id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=385;
 
 --
 -- AUTO_INCREMENT pour la table `wp_posts`
 --
 ALTER TABLE `wp_posts`
-  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=114;
+  MODIFY `ID` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
 
 --
 -- AUTO_INCREMENT pour la table `wp_termmeta`
