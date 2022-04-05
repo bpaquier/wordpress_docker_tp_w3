@@ -22,12 +22,12 @@ add_shortcode('login_form', function () {
     <form action='<?= home_url('wp-login.php') ?>' method='post'>
         <div>
             <label for="id">Identifiant</label>
-            <input id="id" type="text" name="log">
+            <input id="id" type="text" name="log" placeholder="identifiant">
         </div>
         <input type="hidden" action="">
         <div>
             <label for="pass">Mot de passe</label>
-            <input type="password" id="pass" name="pwd">
+            <input type="password" id="pass" name="pwd" placeholder="password">
         </div>
         <div>
             <input type="submit" value="se connecter" name="wp-submit">
@@ -42,15 +42,15 @@ add_shortcode('register_form', function() {
     <form action="<?= admin_url('admin-post.php')?>" method="post">
         <div>
             <label for="name">Name</label>
-            <input id="name" type="text" name="name" required>
+            <input id="name" type="text" name="name" placeholder="Name" required>
         </div>
         <div>
-            <label for="mail">E mail</label>
-            <input id="mail" type="mail" name="mail" required>
+            <label for="mail">Email</label>
+            <input id="mail" type="mail" name="mail" placeholder="email" required>
         </div>
         <div>
             <label for="pass">Mot de passe</label>
-            <input type="password" id="pass" name="pwd" required>
+            <input type="password" id="pass" name="pwd" placeholder="password" required>
         </div>
         <div>
             <label for="role">Choisir un role</label>
