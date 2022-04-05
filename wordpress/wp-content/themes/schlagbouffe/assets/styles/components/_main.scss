@@ -4,3 +4,18 @@
   margin: auto;
   max-width: 2000px;
 }
+
+.info, .alert {
+  width: 80%;
+  text-align: center;
+  padding: 30px 20px;
+  background-color: #3a8941;
+  border-radius: 10px;
+  max-width: 600px;
+  color: white;
+  margin: 50px auto;
+}
+
+.alert {
+  background-color: palevioletred;
+}

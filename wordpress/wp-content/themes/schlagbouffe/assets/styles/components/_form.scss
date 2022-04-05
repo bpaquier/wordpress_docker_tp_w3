@@ -1,11 +1,43 @@
 form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 0 auto;
-    width: 90%;
-    margin-top: 50px;
+    align-items: flex-start;
+    margin: 50px auto;
+    width: 70%;
+    max-width: 500px;
 
+    .groupContainer{
+        flex-wrap: wrap;
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    textarea {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+
+    .group {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 10px;
+        width: fit-content;
+
+        input {
+            margin-right: 5px;
+            margin-bottom: 10px;
+
+            &[type= "checkbox"], &[type= 'radio'] {
+                width: fit-content;
+            }
+        }
+        label {
+            width: fit-content;
+        }
+
+    }
     input{
         width: 360px;
         border-radius: .5rem;
@@ -14,9 +46,12 @@ form {
             color: $color-gray-2;
         }
 
+
+
         &[type='text'],
         &[type='password'],
-        &[type='mail'] {
+        &[type='mail'],
+        &[type="number"]{
             padding: 2rem;
             margin-bottom: 2rem;
             border: 1px solid $color-gray-2;
@@ -32,7 +67,7 @@ form {
         }
     }
 
-    select{
+    select {
         width: 360px;
         height: 56px;
         border-radius: .5rem;
@@ -47,8 +82,19 @@ form {
         margin-bottom: 1rem;
     }
 
+    p {
+        font-size: 20px;
+        margin-bottom: 1rem;
+    }
+
     div {
         display: flex;
         flex-direction: column;
+        width: 100%;
+    }
+
+    .newStep {
+        margin-left: 10px;
+        margin-bottom: 20px;
     }
 }

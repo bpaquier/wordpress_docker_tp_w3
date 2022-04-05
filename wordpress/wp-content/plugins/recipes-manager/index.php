@@ -357,6 +357,10 @@ add_action( 'create_category', 'save_taxonomy_custom_meta_field', 10, 2 );
  * add post Form shortcode
  */
 add_shortcode('new_post_form', function () {
+    $types = get_terms([
+        'taxonomy' => 'type',
+        'hide_empty' => false
+    ]);
 
     $ingredients = get_terms([
         'taxonomy' => 'ingredient',
@@ -368,67 +372,171 @@ add_shortcode('new_post_form', function () {
         'hide_empty' => false
     ]);
 
+    $userID = get_current_user_id();
+    $userRole = get_userdata($userID)->roles;
+
     ob_start(); ?>
-        <form action='<?= home_url('wp-login.php') ?>' method='post'>
-            <input type="hidden" action="">
+        <form action='<?= admin_url('admin-post.php') ?>' method='post'>
             <div>
-                <label for="title">Title</label>
+                <p for="title">Title</p>
                 <input id="title" type="text" name="title">
             </div>
             <div>
-                <label for="description">Description</label>
-                <textarea id="description" name="description"></textarea>
+                <p for="description">Description</p>
+                <textarea id="description" name="description" rows="10"></textarea>
             </div>
             <div>
                 <p>Difficulty</p>
-                <input type="radio" name="difficulty" value="easy" id="easy" />
-                <label for="easy">easy</label>
-                <br>
-                <input type="radio" name="difficulty" value="normal" id="normal" />
-                <label for="normal">normal</label>
-                <br>
-                <input type="radio" name="difficulty" value="hard" id="hard" />
-                <label for="hard">hard</label>
+                <div class="group">
+                    <input type="radio" name="difficulty" value="easy" id="easy" />
+                    <label for="easy">easy</label>
+                </div>
+                <div class="group">
+                    <input type="radio" name="difficulty" value="normal" id="normal" />
+                    <label for="normal">normal</label>
+                </div>
+                <div class="group">
+                    <input type="radio" name="difficulty" value="hard" id="hard" />
+                    <label for="hard">hard</label>
+                </div>
             </div>
             <div>
                 <p>Price</p>
+                <div class=group>
                 <input type="number" name="price" id="price"  />
                 <label for="price">euros</label>
+                </div>
             </div>
             <div>
                 <p>Preparation time</p>
+                <div class="group">
                 <input type="number" name="preparation_time" id="preparation" />
                 <label for="preparation">min</label>
+                </div>
             </div>
             <div>
+
                 <p>Cooking time</p>
+                <div class="group">
                 <input type="number" name="cooking_time" id="cooking" />
                 <label for="cooking">min</label>
+                </div>
             </div>
+            <?php if(count($types) > 0) : ?>
+                <p>Ingredients</p>
+                <div class="groupContainer">
+                    <?php foreach ($types as $key => $type) : ?>
+                            <div class="group">
+                                <input type="checkbox" name="type <?= $type->term_id; ?>" id="<?= 'type' . $key ?>" />
+                                <label for="<?= 'type' . $key ?>"><?= $type->name; ?></label>
+                            </div>
+                    <?php endforeach; ?>
+                </div>
+            <?php endif; ?>
             <?php if(count($ingredients) > 0) : ?>
                 <p>Ingredients</p>
-                <div>
+                <div class="groupContainer">
                     <?php foreach ($ingredients as $key => $ingredient) : ?>
-                        <input type="checkbox" name="<?= $ingredient->term_id; ?>" id="<?= 'ingredient' . $key ?>" />
+                    <div class="group">
+                        <input type="checkbox" name="ingredient <?= $ingredient->term_id; ?>" id="<?= 'ingredient' . $key ?>" />
                         <label for="<?= 'ingredient' . $key ?>"><?= $ingredient->name; ?></label>
+                    </div>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
             <?php if(count($ustensils) > 0) : ?>
                 <p>Ustensils</p>
-                <div>
+                <div class="groupContainer">
                     <?php foreach ($ustensils as $key => $ustensil) : ?>
-                        <input type="checkbox" name="<?= $ustensil->term_id; ?>" id="<?= 'ustensil' . $key ?>" />
+                    <div class="group">
+                        <input type="checkbox" name="ustensil <?= $ustensil->term_id; ?>" id="<?= 'ustensil' . $key ?>" />
                         <label for="<?= 'ustensil' . $key ?>"><?= $ustensil->name; ?></label>
+                    </div>
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-            <div>
-                <input type="submit" value="Publish" name="wp-submit">
+            <div class="steps">
+                <p>Steps</p>
+                <div class="group">
+                    <input type="text" name="step-1" placeholder="step 1">
+                </div>
             </div>
-
+            <button class="newStep">add new step</button>
+            <div>
+                <input type="submit" value="<?= in_array( 'recipes_contributor', $userRole) ? 'Save on draft' : 'Publish' ?>" name="wp-submit">
+            </div>
+            <input type="hidden" name="action" value="recipe_form">
+            <?php wp_referer_field() ?>
         </form>
+        <script>
+            let count = 2
+            document.querySelector('.newStep').addEventListener('click', (e) => {
+                e.preventDefault()
+                const container = document.createElement('div');
+                container.className = "group"
+                container.innerHTML = "<input type='text' name='step-" + count +"' placeholder='step " + count + "'>"
+                document.querySelector('.steps').appendChild(container)
+                count++
+            } )
+        </script>
     <?php return ob_get_clean();
+});
+
+add_action('admin_post_recipe_form', function() {
+    $userID = get_current_user_id();
+    $userRole = get_userdata($userID)->roles;
+
+
+   function getSteps() {
+       $array = array();
+       $i = 0;
+       foreach ($_POST as $key => $value) {
+           if(str_contains($key, 'step')) {
+               $array[$i] = stripslashes($value);
+               $i++;
+           }
+       }
+       return $array;
+   }
+
+   function getTaxo($taxo) {
+       $array = array();
+
+       foreach ($_POST as $key => $value) {
+           if(str_contains($key, $taxo)) {
+               $array[] = stripslashes(explode('_',$key)[1]);
+           }
+       }
+       return $array;
+   }
+
+   $args = [
+        'post_title' => $_POST['title'],
+        'post_content' => $_POST['description'],
+        'post_type' => 'recipes',
+        'post_status' => in_array( 'recipes_contributor', $userRole) ? 'draft' : 'publish',
+        'post_author' => $userID,
+        'meta_input' => [
+            'recipe_difficulty' => $_POST['difficulty'] ?? 'easy' ,
+            'recipe_steps' => getSteps(),
+            'recipe_price' => $_POST['price'],
+            'cooking_time' => $_POST['cooking_time'],
+            'preparation_time' => $_POST['preparation_time']
+        ],
+       'tax_input' => [
+               'ingredient' => getTaxo('ingredient'),
+                'utensil' => getTaxo('ustensil'),
+                'type' => getTaxo('type')
+       ]
+   ];
+
+   wp_insert_post($args);
+
+   $status = in_array( 'recipes_contributor', $userRole) ? 'draft' : 'publish';
+
+   wp_redirect($_POST['_wp_http_referer'] . '?status=' . $status);
+
+   exit();
 });
 
 /*
