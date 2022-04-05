@@ -8,7 +8,7 @@
     width: 90vw;
     max-width: 2000px;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
   }
 
   &__navLinks {
@@ -42,8 +42,6 @@
   }
 
   &__logo {
-    width: 200px;
-    height: 200px;
-    background-color: red;
+    width: 20rem;
   }
 }
