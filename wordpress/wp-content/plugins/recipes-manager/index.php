@@ -207,9 +207,11 @@ function custom_repeatable_meta_box_save($post_id) {
 }
 
 function recipe_difficulty() {
-    $value = get_post_meta($_GET['post'], 'recipe_difficulty', true) ? get_post_meta($_GET['post'],'recipe_difficulty', true ) : null;
+
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'recipe_difficulty', true) ? get_post_meta($_GET['post'],'recipe_difficulty', true ) : null : null;
+
    ?>
-        <input type="radio" name="difficulty" value="easy" id="easy" <?= $value == 'easy' or $value === null ? 'checked' : null ?>/>
+        <input type="radio" name="difficulty" value="easy" id="easy" <?= $value === 'easy' || $value === null ? 'checked' : null ?>/>
         <label for="easy">easy</label>
         <br>
         <input type="radio" name="difficulty" value="normal" id="normal" <?= $value === 'normal' ? 'checked' : null ?>/>
@@ -221,7 +223,7 @@ function recipe_difficulty() {
 }
 
 function recipe_price() {
-    $value = get_post_meta($_GET['post'], 'recipe_price', true) ? get_post_meta($_GET['post'],'recipe_price', true ) : 0;
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'recipe_price', true) ? get_post_meta($_GET['post'],'recipe_price', true ) : 0 : 0;
     ?>
         <input type="number" name="price" id="price" value="<?= $value; ?>" />
         <label for="price">euros</label>
@@ -229,7 +231,7 @@ function recipe_price() {
 }
 
 function cooking_time() {
-    $value = get_post_meta($_GET['post'], 'cooking_time', true) ? get_post_meta($_GET['post'],'cooking_time', true ) : null;
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'cooking_time', true) ? get_post_meta($_GET['post'],'cooking_time', true ) : 0 : 0;
     ?>
         <input type="number" name="cooking_time" id="cooking" value="<?= $value; ?>" />
         <label for="cooking">min</label>
@@ -237,7 +239,7 @@ function cooking_time() {
 }
 
 function preparation_time() {
-    $value = get_post_meta($_GET['post'], 'preparation_time', true) ? get_post_meta($_GET['post'],'preparation_time', true ) : null;
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'preparation_time', true) ? get_post_meta($_GET['post'],'preparation_time', true ) : 0 : 0;
     ?>
         <input type="number" name="preparation_time" id="preparation" value="<?= $value; ?>" />
         <label for="preparation">min</label>
