@@ -385,7 +385,7 @@ add_shortcode('new_post_form', function () {
     ob_start(); ?>
         <form action='<?= admin_url('admin-post.php') ?>' method='post' enctype="multipart/form-data">
             <div>
-                <p for="title">Title</p>
+                <p for="title">Titre</p>
                 <input id="title" type="text" name="title">
             </div>
             <div>
@@ -393,11 +393,11 @@ add_shortcode('new_post_form', function () {
                 <input type="file" name="image_upload" id="image_upload" multiple="false">
             </div>
             <div>
-                <p for="description">Description</p>
+                <p for="description">Déscription</p>
                 <textarea id="description" name="description" rows="10"></textarea>
             </div>
             <div>
-                <p>Difficulty</p>
+                <p>Difficulté</p>
                 <div class="group">
                     <input type="radio" name="difficulty" value="easy" id="easy" />
                     <label for="easy">easy</label>
@@ -412,14 +412,14 @@ add_shortcode('new_post_form', function () {
                 </div>
             </div>
             <div>
-                <p>Price</p>
+                <p>Prix</p>
                 <div class=group>
                 <input type="number" name="price" id="price"  />
                 <label for="price">euros</label>
                 </div>
             </div>
             <div>
-                <p>Preparation time</p>
+                <p>Temps de préparation</p>
                 <div class="group">
                 <input type="number" name="preparation_time" id="preparation" />
                 <label for="preparation">min</label>
@@ -427,14 +427,14 @@ add_shortcode('new_post_form', function () {
             </div>
             <div>
 
-                <p>Cooking time</p>
+                <p>Temps de cuisson</p>
                 <div class="group">
                 <input type="number" name="cooking_time" id="cooking" />
                 <label for="cooking">min</label>
                 </div>
             </div>
             <?php if(count($types) > 0) : ?>
-                <p>Ingredients</p>
+                <p>Type de plat</p>
                 <div class="groupContainer">
                     <?php foreach ($types as $key => $type) : ?>
                             <div class="group">
@@ -445,7 +445,7 @@ add_shortcode('new_post_form', function () {
                 </div>
             <?php endif; ?>
             <?php if(count($ingredients) > 0) : ?>
-                <p>Ingredients</p>
+                <p>Ingrédients</p>
                 <div class="groupContainer">
                     <?php foreach ($ingredients as $key => $ingredient) : ?>
                     <div class="group">
@@ -456,7 +456,7 @@ add_shortcode('new_post_form', function () {
                 </div>
             <?php endif; ?>
             <?php if(count($ustensils) > 0) : ?>
-                <p>Ustensils</p>
+                <p>Ustensiles</p>
                 <div class="groupContainer">
                     <?php foreach ($ustensils as $key => $ustensil) : ?>
                     <div class="group">
@@ -467,17 +467,17 @@ add_shortcode('new_post_form', function () {
                 </div>
             <?php endif; ?>
             <div class="steps">
-                <p>Steps</p>
+                <p>Etapes</p>
                 <div class="group">
                     <input type="text" name="step-1" placeholder="step 1">
                 </div>
             </div>
-            <button class="newStep">add new step</button>
+            <button class="newStep">Ajouter une étape</button>
             <input type="hidden" name="action" value="recipe_form">
             <?php wp_nonce_field('add_recipe', 'add_recipe'); ?>
             <?php wp_referer_field() ?>
             <div>
-                <input type="submit" value="<?= in_array( 'recipes_contributor', $userRole) ? 'Save on draft' : 'Publish' ?>" name="wp-submit">
+                <input type="submit" value="<?= in_array( 'recipes_contributor', $userRole) ? 'Sauver le brouillon' : 'Publier' ?>" name="wp-submit">
             </div>
         </form>
         <script>
