@@ -2,6 +2,7 @@
 /*
  Plugin Name: Recipes Manager
  Author: Bastien Paquier
+ Description: Ce plugin permet de pouvoir ajouter des recettes, crée des roles définis pour les administer et permet de gerer les formulaires d'ajout de recettes grâce à un shortcode.
  Version: 1.0
  */
 
@@ -206,9 +207,11 @@ function custom_repeatable_meta_box_save($post_id) {
 }
 
 function recipe_difficulty() {
-    $value = get_post_meta($_GET['post'], 'recipe_difficulty', true) ? get_post_meta($_GET['post'],'recipe_difficulty', true ) : null;
+
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'recipe_difficulty', true) ? get_post_meta($_GET['post'],'recipe_difficulty', true ) : null : null;
+
    ?>
-        <input type="radio" name="difficulty" value="easy" id="easy" <?= $value == 'easy' or $value === null ? 'checked' : null ?>/>
+        <input type="radio" name="difficulty" value="easy" id="easy" <?= $value === 'easy' || $value === null ? 'checked' : null ?>/>
         <label for="easy">easy</label>
         <br>
         <input type="radio" name="difficulty" value="normal" id="normal" <?= $value === 'normal' ? 'checked' : null ?>/>
@@ -220,7 +223,7 @@ function recipe_difficulty() {
 }
 
 function recipe_price() {
-    $value = get_post_meta($_GET['post'], 'recipe_price', true) ? get_post_meta($_GET['post'],'recipe_price', true ) : 0;
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'recipe_price', true) ? get_post_meta($_GET['post'],'recipe_price', true ) : 0 : 0;
     ?>
         <input type="number" name="price" id="price" value="<?= $value; ?>" />
         <label for="price">euros</label>
@@ -228,7 +231,7 @@ function recipe_price() {
 }
 
 function cooking_time() {
-    $value = get_post_meta($_GET['post'], 'cooking_time', true) ? get_post_meta($_GET['post'],'cooking_time', true ) : null;
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'cooking_time', true) ? get_post_meta($_GET['post'],'cooking_time', true ) : 0 : 0;
     ?>
         <input type="number" name="cooking_time" id="cooking" value="<?= $value; ?>" />
         <label for="cooking">min</label>
@@ -236,7 +239,7 @@ function cooking_time() {
 }
 
 function preparation_time() {
-    $value = get_post_meta($_GET['post'], 'preparation_time', true) ? get_post_meta($_GET['post'],'preparation_time', true ) : null;
+    $value = isset($_GET['post']) ? get_post_meta($_GET['post'], 'preparation_time', true) ? get_post_meta($_GET['post'],'preparation_time', true ) : 0 : 0;
     ?>
         <input type="number" name="preparation_time" id="preparation" value="<?= $value; ?>" />
         <label for="preparation">min</label>
@@ -382,7 +385,7 @@ add_shortcode('new_post_form', function () {
     ob_start(); ?>
         <form action='<?= admin_url('admin-post.php') ?>' method='post' enctype="multipart/form-data">
             <div>
-                <p for="title">Title</p>
+                <p for="title">Titre</p>
                 <input id="title" type="text" name="title">
             </div>
             <div>
@@ -390,11 +393,11 @@ add_shortcode('new_post_form', function () {
                 <input type="file" name="image_upload" id="image_upload" multiple="false">
             </div>
             <div>
-                <p for="description">Description</p>
+                <p for="description">Déscription</p>
                 <textarea id="description" name="description" rows="10"></textarea>
             </div>
             <div>
-                <p>Difficulty</p>
+                <p>Difficulté</p>
                 <div class="group">
                     <input type="radio" name="difficulty" value="easy" id="easy" />
                     <label for="easy">easy</label>
@@ -409,14 +412,14 @@ add_shortcode('new_post_form', function () {
                 </div>
             </div>
             <div>
-                <p>Price</p>
+                <p>Prix</p>
                 <div class=group>
                 <input type="number" name="price" id="price"  />
                 <label for="price">euros</label>
                 </div>
             </div>
             <div>
-                <p>Preparation time</p>
+                <p>Temps de préparation</p>
                 <div class="group">
                 <input type="number" name="preparation_time" id="preparation" />
                 <label for="preparation">min</label>
@@ -424,14 +427,14 @@ add_shortcode('new_post_form', function () {
             </div>
             <div>
 
-                <p>Cooking time</p>
+                <p>Temps de cuisson</p>
                 <div class="group">
                 <input type="number" name="cooking_time" id="cooking" />
                 <label for="cooking">min</label>
                 </div>
             </div>
             <?php if(count($types) > 0) : ?>
-                <p>Ingredients</p>
+                <p>Type de plat</p>
                 <div class="groupContainer">
                     <?php foreach ($types as $key => $type) : ?>
                             <div class="group">
@@ -442,7 +445,7 @@ add_shortcode('new_post_form', function () {
                 </div>
             <?php endif; ?>
             <?php if(count($ingredients) > 0) : ?>
-                <p>Ingredients</p>
+                <p>Ingrédients</p>
                 <div class="groupContainer">
                     <?php foreach ($ingredients as $key => $ingredient) : ?>
                     <div class="group">
@@ -453,7 +456,7 @@ add_shortcode('new_post_form', function () {
                 </div>
             <?php endif; ?>
             <?php if(count($ustensils) > 0) : ?>
-                <p>Ustensils</p>
+                <p>Ustensiles</p>
                 <div class="groupContainer">
                     <?php foreach ($ustensils as $key => $ustensil) : ?>
                     <div class="group">
@@ -464,17 +467,17 @@ add_shortcode('new_post_form', function () {
                 </div>
             <?php endif; ?>
             <div class="steps">
-                <p>Steps</p>
+                <p>Etapes</p>
                 <div class="group">
                     <input type="text" name="step-1" placeholder="step 1">
                 </div>
             </div>
-            <button class="newStep">add new step</button>
+            <button class="newStep">Ajouter une étape</button>
             <input type="hidden" name="action" value="recipe_form">
             <?php wp_nonce_field('add_recipe', 'add_recipe'); ?>
             <?php wp_referer_field() ?>
             <div>
-                <input type="submit" value="<?= in_array( 'recipes_contributor', $userRole) ? 'Save on draft' : 'Publish' ?>" name="wp-submit">
+                <input type="submit" value="<?= in_array( 'recipes_contributor', $userRole) ? 'Sauver le brouillon' : 'Publier' ?>" name="wp-submit">
             </div>
         </form>
         <script>
@@ -552,16 +555,24 @@ add_action('admin_post_recipe_form', function() {
 
        if(is_wp_error($attachementId)) {
            wp_redirect($_POST['_wp_http_referer'] . '?status=uploadError');
+           exit();
        } else {
             set_post_thumbnail($postId, $attachementId);
        }
    }
 
+   if($postId === 0) {
+       wp_redirect($_POST['_wp_http_referer'] . '?status=error' );
+       exit();
+   } else {
+       if(in_array( 'recipes_contributor', $userRole)) {
+           wp_redirect($_POST['_wp_http_referer'] . '?status=draft' );
+       } else {
+           wp_redirect(get_permalink($postId));
+       }
+   }
 
 
-   $status = in_array( 'recipes_contributor', $userRole) ? 'draft' : 'publish';
-
-   wp_redirect($_POST['_wp_http_referer'] . '?status=' . $status);
 
    exit();
 });
