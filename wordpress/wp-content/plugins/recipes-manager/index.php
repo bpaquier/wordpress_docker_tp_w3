@@ -413,14 +413,14 @@ add_shortcode('new_post_form', function () {
             </div>
             <div>
                 <p>Prix</p>
-                <div class=group>
+                <div class="group fullWidth">
                 <input type="number" name="price" id="price"  />
                 <label for="price">euros</label>
                 </div>
             </div>
             <div>
                 <p>Temps de préparation</p>
-                <div class="group">
+                <div class="group fullWidth">
                 <input type="number" name="preparation_time" id="preparation" />
                 <label for="preparation">min</label>
                 </div>
@@ -428,7 +428,7 @@ add_shortcode('new_post_form', function () {
             <div>
 
                 <p>Temps de cuisson</p>
-                <div class="group">
+                <div class="group fullWidth">
                 <input type="number" name="cooking_time" id="cooking" />
                 <label for="cooking">min</label>
                 </div>
@@ -466,13 +466,15 @@ add_shortcode('new_post_form', function () {
                     <?php endforeach; ?>
                 </div>
             <?php endif; ?>
-            <div class="steps">
-                <p>Etapes</p>
-                <div class="group">
-                    <input type="text" name="step-1" placeholder="step 1">
+            <div class="stepsContainer">
+                <div class="steps">
+                    <p>Etapes</p>
+                    <div class="group fullWidth">
+                        <input type="text" name="step-1" placeholder="step 1">
+                    </div>
                 </div>
+                <button class="newStep">Ajouter une étape</button>
             </div>
-            <button class="newStep">Ajouter une étape</button>
             <input type="hidden" name="action" value="recipe_form">
             <?php wp_nonce_field('add_recipe', 'add_recipe'); ?>
             <?php wp_referer_field() ?>

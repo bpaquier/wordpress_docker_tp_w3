@@ -4,7 +4,7 @@ form {
     align-items: flex-start;
     margin: 50px auto;
     width: 70%;
-    max-width: 500px;
+    max-width: 700px;
 
     .groupContainer{
         flex-wrap: wrap;
@@ -25,6 +25,11 @@ form {
         margin: 10px;
         width: fit-content;
 
+        &.fullWidth {
+            width: 100%;
+            margin: 0;
+        }
+
         input {
             margin-right: 5px;
             margin-bottom: 10px;
@@ -39,7 +44,7 @@ form {
 
     }
     input{
-        width: 360px;
+        width: 100%;
         border-radius: .5rem;
 
         &::placeholder{
@@ -59,15 +64,32 @@ form {
             border: 1px solid $color-gray-2;
             height: 56px;
         }
+    }
 
-        &[type='submit']{
-            border: none;
-            height: 45px;
-            background-color: $color-primary;
-            color: $color-white;
-            vertical-align: text-top;
+    input[type="submit"], button, input[type="file"]::-webkit-file-upload-button {
+        border: none;
+        color: $color-white;
+        cursor: pointer;
+        width: fit-content;
+
+        &:hover {
+            opacity: 0.8;
         }
     }
+    button, input[type="file"]::-webkit-file-upload-button {
+        background-color: $color-tertiary;
+        border-radius: 10px;
+        padding: 10px 15px;
+    }
+
+    input[type="submit"] {
+        background-color: $color-primary;
+        padding: 20px 60px;
+        margin: auto;
+        font-size: 15px;
+    }
+
+
 
     select {
         width: 360px;
@@ -95,15 +117,28 @@ form {
         width: 100%;
     }
 
-    .newStep {
-        margin-left: 10px;
-        margin-bottom: 20px;
+    .stepsContainer {
+        margin-bottom: 30px;
     }
 
-    input[type= 'submit'] {
-        cursor: pointer;
-        &:hover {
-            opacity: 0.8;
+    .steps {
+        margin-bottom: 0;
+        .group {
+            margin-bottom: 0;
+            width: 100%;
+
+            &:last-child {
+                margin-bottom: 10px;
+            }
+
+            input{
+                margin: 0;
+                flex-grow: 1;
+            }
         }
+    }
+
+    .newStep {
+        font-size: 12px;
     }
 }
