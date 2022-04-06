@@ -4,7 +4,7 @@ form {
     align-items: flex-start;
     margin: 50px auto;
     width: 70%;
-    max-width: 500px;
+    max-width: 700px;
 
     .groupContainer{
         flex-wrap: wrap;
@@ -27,6 +27,7 @@ form {
 
         &.fullWidth {
             width: 100%;
+            margin: 0;
         }
 
         input {
@@ -67,11 +68,9 @@ form {
 
     input[type="submit"], button, input[type="file"]::-webkit-file-upload-button {
         border: none;
-        background-color: $color-primary;
         color: $color-white;
         cursor: pointer;
-        padding: 20px;
-
+        width: fit-content;
 
         &:hover {
             opacity: 0.8;
@@ -81,6 +80,13 @@ form {
         background-color: $color-tertiary;
         border-radius: 10px;
         padding: 10px 15px;
+    }
+
+    input[type="submit"] {
+        background-color: $color-primary;
+        padding: 20px 60px;
+        margin: auto;
+        font-size: 15px;
     }
 
 
@@ -133,7 +139,6 @@ form {
     }
 
     .newStep {
-        margin-left: 10px;
-        width: fit-content;
+        font-size: 12px;
     }
 }
