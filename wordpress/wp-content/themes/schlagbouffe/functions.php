@@ -209,7 +209,7 @@ function get_navigation_items($type) {
   if ( $menu_items = wp_get_nav_menu_items( 'main-menu' ) ) {
 
     foreach ( $menu_items as $menu_item ) {
-      if($menu_item->title === 'Recettes' || $menu_item->title === 'Actualités') {
+      if($menu_item->title === 'Recettes' || $menu_item->title === 'Actualités' || $menu_item->title === 'Ajouter une recette') {
         $mainNavItems[] = $menu_item;
       } else {
         $recipesNavItems[] = $menu_item;
