@@ -555,16 +555,24 @@ add_action('admin_post_recipe_form', function() {
 
        if(is_wp_error($attachementId)) {
            wp_redirect($_POST['_wp_http_referer'] . '?status=uploadError');
+           exit();
        } else {
             set_post_thumbnail($postId, $attachementId);
        }
    }
 
+   if($postId === 0) {
+       wp_redirect($_POST['_wp_http_referer'] . '?status=error' );
+       exit();
+   } else {
+       if(in_array( 'recipes_contributor', $userRole)) {
+           wp_redirect($_POST['_wp_http_referer'] . '?status=draft' );
+       } else {
+           wp_redirect(get_permalink($postId));
+       }
+   }
 
 
-   $status = in_array( 'recipes_contributor', $userRole) ? 'draft' : 'publish';
-
-   wp_redirect($_POST['_wp_http_referer'] . '?status=' . $status);
 
    exit();
 });

@@ -4,11 +4,7 @@
 if(is_user_logged_in()) {
     get_header();
     if(isset($_GET['status'])) {
-        if($_GET['status'] === 'publish'){
-            ?>
-                <p class="info">Your post has been published</p>
-            <?php
-        } elseif ($_GET['status'] === 'draft') {
+       if ($_GET['status'] === 'draft') {
             ?>
                 <p class="info">Your post is on draft</p>
             <?php
@@ -16,7 +12,11 @@ if(is_user_logged_in()) {
             ?>
                 <p class="danger">Can not upload image</p>
             <?php
-        }
+        } elseif ($_GET['status'] === "error") {
+           ?>
+           <p class="danger">Error when publishing, please contact support</p>
+           <?php
+       }
     } else {
         the_content();
     }
