@@ -20,7 +20,7 @@
             </ul>
           <?php else : ?>
             <ul class="footer__navLinks--links">
-                <h3 class="footer__navLinks--title" id="nav-list-recipes"><?= $main_item->title ?></h3>
+                <h3 class="footer__navLinks--title" id="nav-list-recipes"><a href="<?= $main_item->url ?>"><?= $main_item->title ?></a></h3>
                 <li></li>
             </ul>
           <?php endif; ?>

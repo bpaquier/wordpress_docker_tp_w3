@@ -1,8 +1,9 @@
 <?php
+
 get_header();
 $recipesArgs = [
         'post_type' => 'recipes',
-        'posts_per_page' => '5',
+        'posts_per_page' => '6',
         'orderby' => 'publish_date',
     ];
 $query = new WP_Query($recipesArgs);
@@ -18,7 +19,7 @@ $query = new WP_Query($recipesArgs);
           'type' => 'home',
           'title' => 'Bienvenue !',
           'text' => 'Toujours plus d’inspiration en cuisine grâce à nos recettes faciles, rapides et tendances.',
-          'image' => 'https://source.unsplash.com/random/2080x2900'
+          'image' => 'http://localhost:2345/wp-content/uploads/2022/04/hero-header.png'
         )
       );
     ?>
