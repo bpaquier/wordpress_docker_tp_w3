@@ -93,7 +93,7 @@ add_action('init', function () {
     'hierarchical' => false,
     'show_in_menu' => true,
     'show_in_nav_menus' => true,
-    'supports' => ['editor', 'thumbnail', 'title', 'author'],
+    'supports' => ['editor', 'thumbnail', 'title', 'author', 'comments'],
     'capabilities' => [
       'edit_posts' => 'edit_my_recipes',
       'edit_post' => 'edit_my_recipes',

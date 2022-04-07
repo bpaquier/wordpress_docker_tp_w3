@@ -8,6 +8,19 @@ $post = get_post();
 $post_meta = get_post_meta($post->ID);
 $post_ingredients = get_the_terms($post->ID, 'ingredient', true);
 $post_utensils = get_the_terms($post->ID, 'utensil', true);
+$user = wp_get_current_user();
+$roles = ( array ) $user->roles;
+$args = array(
+    'status' => 'approve',
+    'post_id' => $post->ID,
+    'title_reply' => null,
+    'logged_in_as' => null,
+    'comment_field' => '<label class="recipe__comment--title" for="comment">Commentaires</label><br>
+                        <textarea id="comment" name="comment" placeholder="Laissez voter commentaire" required></textarea>',
+    'comment_notes_before' => '',
+    'label_submit' => "Envoyer le commentaire"
+);
+$comments = get_comments($args);
 
 function get_term_image($term_id){
   return get_term_meta($term_id, 'category_image', true);
@@ -36,7 +49,7 @@ function get_cost_fr ($price) {
 ?>
 
   <main class="main">
-    
+
     <div class="recipe">
       <div class="recipe__header">
           <h1 class="recipe__header-title"><?= the_title(); ?></h1>
@@ -73,7 +86,7 @@ function get_cost_fr ($price) {
                 </p>
               </li>
             <?php endif; ?>
-            
+
             <?php if(isset($post_meta['cooking_time'][0]) && isset($post_meta['preparation_time'][0])): ?>
               <?php $total_time = (int) $post_meta['cooking_time'][0] + (int) $post_meta['preparation_time'][0];               ?>
               <li class="recipe__content-info">
@@ -122,7 +135,7 @@ function get_cost_fr ($price) {
         </div>
         <!-- USTENSILS ITEMS -->
         <div class="recipe__details-content" data-detail-content="utensils">
-          <?php if(isset($post_utensils)) : ?>  
+          <?php if(isset($post_utensils)) : ?>
               <div class="recipe__details-content-small-cards">
                 <?php foreach($post_utensils as $utensil) :  ?>
                   <div class="recipe__details-content-small-card">
@@ -163,6 +176,25 @@ function get_cost_fr ($price) {
             </div>
           <?php endif; ?>
         </div>
+      </div>
+      <div class="recipe__comment">
+        <?php
+        if ( $comments && comments_open() && in_array('administrator', $roles) or in_array('contributor', $roles)) {
+            comment_form( $args );
+
+            foreach ( $comments as $comment ) {
+                if ($comment->comment_approved && wp_get_comment_status( $comment->comment_ID) === 'approved') {
+                    echo '<div class="recipe__comment--section">';
+                        echo '<div class="recipe__comment--names">';
+                            echo '<p class="recipe__comment--author">' . $comment->comment_author_email . '</p>';
+                            echo '<p class="recipe__comment--content">' . $comment->comment_content . '</p>';
+                        echo '</div>';
+                        echo '<p class="recipe__comment--content">' . get_comment_date() . '</p>';
+                    echo '</div>';
+                }
+            }
+        }
+        ?>
       </div>
     </div>
   </main>
