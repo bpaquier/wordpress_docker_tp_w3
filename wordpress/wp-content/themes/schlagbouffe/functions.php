@@ -57,7 +57,6 @@ add_shortcode('register_form', function() {
             <select id="role" name="role" required>
                 <option value="recipes_contributor">Contributor</option>
                 <option value="administrator">admin</option>
-                <option value="recipes_manager">Recipes Manager</option>
             </select>
         </div>
 
