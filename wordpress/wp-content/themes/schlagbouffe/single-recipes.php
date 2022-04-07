@@ -179,11 +179,12 @@ function get_cost_fr ($price) {
       </div>
       <div class="recipe__comment">
         <?php
-        if ( $comments && comments_open() && in_array('administrator', $roles) or in_array('contributor', $roles)) {
+
+        if ( in_array('administrator', $roles) || in_array('contributor', $roles)) {
             comment_form( $args );
 
             foreach ( $comments as $comment ) {
-                if ($comment->comment_approved && wp_get_comment_status( $comment->comment_ID) === 'approved') {
+                if ($comment && wp_get_comment_status( $comment->comment_ID) === 'approved') {
                     echo '<div class="recipe__comment--section">';
                         echo '<div class="recipe__comment--names">';
                             echo '<p class="recipe__comment--author">' . $comment->comment_author_email . '</p>';
