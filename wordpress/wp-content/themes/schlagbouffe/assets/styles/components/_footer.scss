@@ -37,9 +37,17 @@
       font-weight: 700;
       text-transform: uppercase;
       color: $color-white;
+
+      a {
+        font-size: 15px;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-white;
+        text-decoration: none;
+      }
     }
 
-    &--links:nth-last-child(1){
+    &--links:not(:first-child) {
       margin-left: 4rem;
       height: inherit;
       display: flex;
