@@ -1,6 +1,8 @@
 .recipe-list {
   width: 90vw;
+  max-width: 128rem;
   margin: auto;
+  margin-bottom: 8rem;
   display: flex;
   flex-direction: column;
 
@@ -13,15 +15,8 @@
   }
 
   &__list {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    --item-gap: 1rem;
-    gap: var(--item-gap);
-  }
-  &__item {
-    width: calc(33% - var(--item-gap) - var(--item-gap));
-    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
   }
 }
