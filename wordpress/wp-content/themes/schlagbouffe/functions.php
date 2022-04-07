@@ -39,7 +39,7 @@ add_shortcode('login_form', function () {
 
 add_shortcode('register_form', function() {
     ob_start(); ?>
-    <form action="<?= admin_url('admin-post.php')?>" method="post">
+    <form action="<?= admin_url('admin-post.php')?>?action=wp_user_register" method="post">
         <div>
             <label for="name">Nom</label>
             <input id="name" type="text" name="name" placeholder="Nom" required>
@@ -60,7 +60,7 @@ add_shortcode('register_form', function() {
                 <option value="recipes_manager">Recipes Manager</option>
             </select>
         </div>
-        <input type="hidden" name="action" value="wp_user_register">
+
         <input type="submit" value="Envoyer" >
         <?php wp_nonce_field('register', 'register'); ?>
     </form>
@@ -70,7 +70,8 @@ add_shortcode('register_form', function() {
 /**
  * handle register form
  */
-add_action('admin_post_wp_user_register', function() {
+add_action('admin_post_nopriv_wp_user_register', function() {
+
     if (!wp_verify_nonce($_POST['register'], 'register')) {
         die('nonce invalide');
     }
@@ -81,13 +82,22 @@ add_action('admin_post_wp_user_register', function() {
     $role = $_POST['role'];
 
     if(isset($name) and isset($mail) and isset($pwd) and isset($role)) {
-        wp_insert_user([
+
+
+        $newuser = wp_insert_user([
             'user_pass' => $pwd,
             'user_login' => $name,
-            "user_mail" => $mail,
+            "user_email" => $mail,
             "role" => $role
         ]);
-        wp_redirect(home_url() . $_POST['_wp_http_referer'] . '?success=true');
+
+
+        if(is_int($newuser)) {
+            wp_redirect(home_url() . $_POST['/login']);
+        } else {
+            wp_redirect(home_url() . $_POST['_wp_http_referer'] . '?success=false&message=' . array_values(array_values($newuser->errors)[0])[0]);
+        }
+
     } else {
         wp_redirect(home_url() . $_POST['_wp_http_referer'] . '?success=false');
     }
