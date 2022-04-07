@@ -92,7 +92,7 @@ add_action('admin_post_nopriv_wp_user_register', function() {
 
 
         if(is_int($newuser)) {
-            wp_redirect(home_url() . $_POST['/login']);
+            wp_redirect(home_url('/loging'));
         } else {
             wp_redirect(home_url() . $_POST['_wp_http_referer'] . '?success=false&message=' . array_values(array_values($newuser->errors)[0])[0]);
         }

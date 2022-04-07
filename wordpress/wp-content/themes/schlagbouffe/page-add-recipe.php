@@ -2,9 +2,6 @@
 
 
 if(is_user_logged_in()) {
-    wp_redirect(home_url('/login'));
-    exit();
-} else {
     get_header();
     if(isset($_GET['status'])) {
         if ($_GET['status'] === 'draft') {
@@ -24,6 +21,11 @@ if(is_user_logged_in()) {
         the_content();
     }
     get_footer();
+} else {
+
+
+    wp_redirect(home_url('/login'));
+    exit();
 }
 
 
